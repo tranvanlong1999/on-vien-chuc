@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 interface Props { cards: Flashcard[]; documents: LawDocument[] }
 
 export function FlashcardsClient({ cards, documents }: Props) {
-  const { masteredCards, mistakes, masterFlashcard, unmasterFlashcard, updateFlashcardSRS, removeMistake } = useAppStore();
+  const { masteredCards, mistakes, masterFlashcard, unmasterFlashcard, updateFlashcardSRS, addMistake, removeMistake } = useAppStore();
   const [docFilter, setDocFilter] = useState('all');
   const [mode, setMode] = useState<'review' | 'mistakes'>('review');
   const [flipped, setFlipped] = useState(false);
@@ -23,7 +23,9 @@ export function FlashcardsClient({ cards, documents }: Props) {
     return base.filter((c) => c.docId === docFilter);
   }, [deck, docFilter, mode, mistakes]);
 
-  const card = filteredDeck[index];
+  // Reset index when filter/mode changes to avoid out-of-bounds
+  const safeIndex = filteredDeck.length > 0 ? Math.min(index, filteredDeck.length - 1) : 0;
+  const card = filteredDeck[safeIndex];
   const isMastered = card ? masteredCards.includes(card.id) : false;
 
   const next = () => { setFlipped(false); setIndex((i) => (i + 1) % Math.max(1, filteredDeck.length)); };
@@ -32,9 +34,13 @@ export function FlashcardsClient({ cards, documents }: Props) {
   const handleRate = (quality: number) => {
     if (!card) return;
     updateFlashcardSRS(card.id, quality, card);
-    if (quality >= 4) masterFlashcard(card.id);
-    else unmasterFlashcard(card.id);
-    if (mode === 'mistakes' && quality >= 4) removeMistake(card.id);
+    if (quality >= 4) {
+      masterFlashcard(card.id);
+      if (mode === 'mistakes') removeMistake(card.id);
+    } else {
+      unmasterFlashcard(card.id);
+      if (quality <= 2) addMistake(card.id); // "Chưa nhớ" → thêm vào câu sai
+    }
     next();
   };
 
@@ -58,7 +64,7 @@ export function FlashcardsClient({ cards, documents }: Props) {
           Tất cả
         </button>
         {documents.map((d) => (
-          <button key={d.id} onClick={() => setDocFilter(d.id)} className={cn('px-3 py-1 rounded-full text-xs font-semibold border transition-colors', docFilter === d.id ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-600 border-slate-200')}>
+          <button key={d.id} onClick={() => { setDocFilter(d.id); setIndex(0); setFlipped(false); }} className={cn('px-3 py-1 rounded-full text-xs font-semibold border transition-colors', docFilter === d.id ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-600 border-slate-200')}>
             {d.icon} {d.shortTitle.split(' ').slice(0, 2).join(' ')}
           </button>
         ))}
@@ -73,12 +79,12 @@ export function FlashcardsClient({ cards, documents }: Props) {
         <>
           {/* Progress */}
           <div className="flex items-center justify-between text-sm text-slate-500">
-            <span>{index + 1} / {filteredDeck.length}</span>
+            <span>{safeIndex + 1} / {filteredDeck.length}</span>
             <span className="text-green-600 font-medium">{masteredCards.length} thành thạo</span>
           </div>
 
           {/* Flashcard */}
-          <div className="relative h-64 cursor-pointer" onClick={() => setFlipped((f) => !f)}>
+          <div className="relative h-64 cursor-pointer perspective-1000" onClick={() => setFlipped((f) => !f)}>
             <div className={cn('absolute inset-0 transition-all duration-500 transform-style-3d', flipped ? 'rotate-y-180' : '')}>
               {/* Front */}
               <div className="absolute inset-0 card p-6 flex flex-col items-center justify-center text-center backface-hidden">
@@ -120,7 +126,7 @@ export function FlashcardsClient({ cards, documents }: Props) {
             <button onClick={prev} className="flex items-center gap-1 px-4 py-2 rounded-lg border border-slate-200 text-slate-600 text-sm hover:bg-slate-50 transition-colors">
               <ChevronLeft className="w-4 h-4" />Trước
             </button>
-            <button onClick={() => setDeck(shuffle(cards))} className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1">
+            <button onClick={() => { setDeck(shuffle(cards)); setIndex(0); setFlipped(false); }} className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1">
               <RotateCcw className="w-3.5 h-3.5" />Xáo bài
             </button>
             <button onClick={next} className="flex items-center gap-1 px-4 py-2 rounded-lg border border-slate-200 text-slate-600 text-sm hover:bg-slate-50 transition-colors">
