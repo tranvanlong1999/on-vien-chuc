@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import { Layers, Zap, Pencil, Link as LinkIcon, Flame, MessageSquare, Trophy } from 'lucide-react';
 
 const games = [
   {
     href: '/luyen-tap/flashcards',
-    icon: Layers,
     emoji: '🃏',
     title: 'Flashcard SRS',
     desc: 'Ôn bằng thẻ ghi nhớ, tự động nhắc lại đúng thời điểm',
@@ -13,7 +11,6 @@ const games = [
   },
   {
     href: '/luyen-tap/quiz',
-    icon: Trophy,
     emoji: '🏆',
     title: 'Trắc Nghiệm',
     desc: '20 câu MCQ ngẫu nhiên, luyện sổ tay câu sai',
@@ -22,7 +19,6 @@ const games = [
   },
   {
     href: '/luyen-tap/toc-do',
-    icon: Zap,
     emoji: '⚡',
     title: 'Thi Tốc Độ',
     desc: '10 câu · 10s/câu · Hết giờ tính sai — luyện phản xạ',
@@ -32,7 +28,6 @@ const games = [
   },
   {
     href: '/luyen-tap/dien-cho-trong',
-    icon: Pencil,
     emoji: '✍️',
     title: 'Điền Chỗ Trống',
     desc: 'Điền vào chỗ trống thuật ngữ pháp luật từ các điều khoản',
@@ -42,7 +37,6 @@ const games = [
   },
   {
     href: '/luyen-tap/noi-tu',
-    icon: LinkIcon,
     emoji: '🔗',
     title: 'Nối Từ',
     desc: 'Ghép số điều với nội dung tương ứng trong 6 giây',
@@ -52,7 +46,6 @@ const games = [
   },
   {
     href: '/luyen-tap/thu-thach-ngay',
-    icon: Flame,
     emoji: '🔥',
     title: 'Thử Thách Ngày',
     desc: '5 câu mỗi ngày · ưu tiên nội dung 2026 · +50 XP',
@@ -62,7 +55,6 @@ const games = [
   },
   {
     href: '/luyen-tap/vuot-ai',
-    icon: Flame,
     emoji: '👾',
     title: 'Vượt Ải Boss',
     desc: '9 Boss · trả lời đúng hạ HP boss, sai bị phản đòn · +150 XP/Boss',
@@ -72,7 +64,6 @@ const games = [
   },
   {
     href: '/luyen-tap/tinh-huong',
-    icon: MessageSquare,
     emoji: '🎭',
     title: 'Tình Huống Sư Phạm',
     desc: 'Xử lý tình huống thực tế, Gemini AI chấm điểm',

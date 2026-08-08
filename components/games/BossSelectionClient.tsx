@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { LawDocument } from '@/types';
 import { cn } from '@/lib/utils';
-import { Flame, CheckCircle2, Ban } from 'lucide-react';
+import { Flame, CheckCircle2 } from 'lucide-react';
 
 interface Props {
   documents: LawDocument[];
@@ -50,8 +50,8 @@ export function BossSelectionClient({ documents, questionCounts }: Props) {
                     <CheckCircle2 className="w-3 h-3" />Đã hạ
                   </span>
                 ) : !hasQuestions ? (
-                  <span className="flex items-center gap-1 text-xs font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
-                    <Ban className="w-3 h-3" />Chưa có câu hỏi
+                  <span className="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
+                    🔒 Chưa có câu hỏi
                   </span>
                 ) : hp < BOSS_MAX_HP ? (
                   <span className="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded-full">
