@@ -19,9 +19,9 @@ export function SwipeCard({ card, docLabel, onRate }: SwipeCardProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotate = useTransform(x, [-300, 300], [-20, 20]);
-  const rightOpacity = useTransform(x, [30, SWIPE_THRESHOLD], [0, 1]);
-  const leftOpacity = useTransform(x, [-SWIPE_THRESHOLD, -30], [1, 0]);
-  const upOpacity = useTransform(y, [-SWIPE_UP_THRESHOLD, SWIPE_UP_THRESHOLD], [1, 0]);
+  const rightOpacity = useTransform(x, [30, SWIPE_THRESHOLD], [0, 1], { clamp: true });
+  const leftOpacity = useTransform(x, [-SWIPE_THRESHOLD, -30], [1, 0], { clamp: true });
+  const upOpacity = useTransform(y, [0, SWIPE_UP_THRESHOLD], [0, 1], { clamp: true });
 
   useEffect(() => {
     setFlipped(false);
