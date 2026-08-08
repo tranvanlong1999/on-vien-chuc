@@ -89,10 +89,8 @@ Hãy chấm điểm bài làm theo đúng rubric trên và trả về JSON.`;
 
     return NextResponse.json(parsed);
   } catch (err) {
-    console.error('Gemini error:', err);
-    return NextResponse.json(
-      { error: 'AI chấm điểm thất bại. Thử lại sau.' },
-      { status: 500 }
-    );
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error('Gemini error:', msg);
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }
