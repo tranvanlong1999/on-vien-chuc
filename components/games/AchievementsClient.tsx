@@ -3,7 +3,7 @@
 import { useAppStore } from '@/lib/store';
 import { ACHIEVEMENTS } from '@/lib/achievements';
 import { cn } from '@/lib/utils';
-import { Medal } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 export function AchievementsClient() {
   const achievements = useAppStore((s) => s.achievements ?? []);
@@ -13,7 +13,7 @@ export function AchievementsClient() {
     <div className="space-y-6 animate-slide-up">
       <div>
         <h1 className="text-2xl font-bold text-slate-800 flex items-center gap-2">
-          <Medal className="w-6 h-6 text-amber-500" />Thành Tích
+          <Award className="w-6 h-6 text-amber-500" />Thành Tích
         </h1>
         <p className="text-slate-500 mt-1">
           Đã mở khoá <span className="font-bold text-amber-600">{earned}/{ACHIEVEMENTS.length}</span> thành tích

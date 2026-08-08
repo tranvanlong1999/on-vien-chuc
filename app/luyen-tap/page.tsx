@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Layers, Zap, PenLine, Link2, Flame, MessageSquare, Trophy, Swords } from 'lucide-react';
+import { Layers, Zap, Pencil, Link, Flame, MessageSquare, Trophy } from 'lucide-react';
 
 const games = [
   {
@@ -32,7 +32,7 @@ const games = [
   },
   {
     href: '/luyen-tap/dien-cho-trong',
-    icon: PenLine,
+    icon: Pencil,
     emoji: '✍️',
     title: 'Điền Chỗ Trống',
     desc: 'Điền vào chỗ trống thuật ngữ pháp luật từ các điều khoản',
@@ -42,7 +42,7 @@ const games = [
   },
   {
     href: '/luyen-tap/noi-tu',
-    icon: Link2,
+    icon: Link,
     emoji: '🔗',
     title: 'Nối Từ',
     desc: 'Ghép số điều với nội dung tương ứng trong 6 giây',
@@ -62,7 +62,7 @@ const games = [
   },
   {
     href: '/luyen-tap/vuot-ai',
-    icon: Swords,
+    icon: Flame,
     emoji: '👾',
     title: 'Vượt Ải Boss',
     desc: '9 Boss · trả lời đúng hạ HP boss, sai bị phản đòn · +150 XP/Boss',

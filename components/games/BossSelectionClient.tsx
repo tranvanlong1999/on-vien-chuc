@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { LawDocument } from '@/types';
 import { cn } from '@/lib/utils';
-import { Swords, CheckCircle2, Lock } from 'lucide-react';
+import { Flame, CheckCircle2, Ban } from 'lucide-react';
 
 interface Props {
   documents: LawDocument[];
@@ -21,7 +21,7 @@ export function BossSelectionClient({ documents, questionCounts }: Props) {
     <div className="space-y-6 animate-slide-up">
       <div>
         <h1 className="text-2xl font-bold text-slate-800 flex items-center gap-2">
-          <Swords className="w-6 h-6 text-red-600" />Vượt Ải Boss
+          <Flame className="w-6 h-6 text-red-600" />Vượt Ải Boss
         </h1>
         <p className="text-slate-500 mt-1">
           Chinh phục {documents.length} Boss — trả lời đúng để hạ Boss, sai thì bị phản đòn
@@ -51,7 +51,7 @@ export function BossSelectionClient({ documents, questionCounts }: Props) {
                   </span>
                 ) : !hasQuestions ? (
                   <span className="flex items-center gap-1 text-xs font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
-                    <Lock className="w-3 h-3" />Chưa có câu hỏi
+                    <Ban className="w-3 h-3" />Chưa có câu hỏi
                   </span>
                 ) : hp < BOSS_MAX_HP ? (
                   <span className="text-xs font-bold text-orange-700 bg-orange-100 px-2 py-0.5 rounded-full">

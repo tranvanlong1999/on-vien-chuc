@@ -6,7 +6,7 @@ import { useAppStore } from '@/lib/store';
 import { MatchPair, LawDocument } from '@/types';
 import { shuffle } from '@/lib/utils';
 import { cn } from '@/lib/utils';
-import { Link2, RotateCcw, Trophy } from 'lucide-react';
+import { Link, RotateCcw, Trophy } from 'lucide-react';
 
 interface Props { pairs: MatchPair[]; documents: LawDocument[] }
 
@@ -104,7 +104,7 @@ export function WordMatchClient({ pairs, documents }: Props) {
     <div className="max-w-2xl mx-auto space-y-4 animate-slide-up" key={key}>
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2">
-          <Link2 className="w-5 h-5 text-violet-600" />Nối Từ
+          <Link className="w-5 h-5 text-violet-600" />Nối Từ
         </h1>
         {highScore > 0 && <span className="text-xs bg-violet-50 text-violet-700 px-2.5 py-1 rounded-full font-semibold"><Trophy className="w-3 h-3 inline mr-1" />Kỷ lục: {highScore}</span>}
       </div>

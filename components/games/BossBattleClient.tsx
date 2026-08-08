@@ -6,7 +6,7 @@ import { useAppStore } from '@/lib/store';
 import { QuizQuestion, LawDocument } from '@/types';
 import { shuffle } from '@/lib/utils';
 import { cn } from '@/lib/utils';
-import { Shield, Swords, Heart, RotateCcw } from 'lucide-react';
+import { Star, Flame, RotateCcw } from 'lucide-react';
 
 interface Props {
   doc: LawDocument;
@@ -112,7 +112,7 @@ export function BossBattleClient({ doc, questions }: Props) {
         </div>
         <button onClick={() => setStarted(true)}
           className="w-full py-3 bg-red-600 text-white rounded-xl font-bold text-lg hover:bg-red-700 transition-colors flex items-center justify-center gap-2">
-          <Swords className="w-5 h-5" />{isAlreadyDefeated ? 'Thử lại' : 'Tấn công!'}
+          <Flame className="w-5 h-5" />{isAlreadyDefeated ? 'Thử lại' : 'Tấn công!'}
         </button>
       </div>
     );
@@ -174,7 +174,7 @@ export function BossBattleClient({ doc, questions }: Props) {
         {/* Player HP */}
         <motion.div animate={shakeTarget === 'player' ? { x: [-8, 8, -6, 6, 0] } : {}} transition={{ duration: 0.3 }}>
           <div className="flex justify-between text-xs font-semibold mb-1">
-            <span className="text-green-600"><Heart className="w-3 h-3 inline" /> Bạn</span>
+            <span className="text-green-600"><Star className="w-3 h-3 inline" /> Bạn</span>
             <span className="text-green-600">{playerHP}/{PLAYER_MAX_HP} HP</span>
           </div>
           <div className="h-3 bg-green-100 rounded-full overflow-hidden">
@@ -190,7 +190,7 @@ export function BossBattleClient({ doc, questions }: Props) {
       {q && (
         <div className="card p-5 space-y-4">
           <span className="text-xs font-semibold text-red-600 uppercase flex items-center gap-1">
-            <Swords className="w-3.5 h-3.5" />{doc.shortTitle}
+            <Flame className="w-3.5 h-3.5" />{doc.shortTitle}
           </span>
           <p className="text-slate-800 font-medium leading-relaxed">{q.question}</p>
           <div className="space-y-2">
@@ -214,7 +214,7 @@ export function BossBattleClient({ doc, questions }: Props) {
               </p>
               <p className="text-xs text-slate-600">{q.explanation}</p>
               <button onClick={next} className="mt-3 w-full py-2 bg-red-600 text-white rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors flex items-center justify-center gap-1">
-                <Shield className="w-3.5 h-3.5" />
+                <Star className="w-3.5 h-3.5" />
                 {idx + 1 >= deck.length ? 'Kết thúc' : 'Tiếp tục chiến đấu →'}
               </button>
             </div>

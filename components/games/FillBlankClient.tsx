@@ -7,7 +7,7 @@ import { FillBlankQuestion, LawDocument } from '@/types';
 import { normalizeAnswer } from '@/lib/generators';
 import { shuffle } from '@/lib/utils';
 import { cn } from '@/lib/utils';
-import { PenLine, RotateCcw, Trophy, ChevronRight } from 'lucide-react';
+import { Pencil, RotateCcw, Trophy, ChevronRight } from 'lucide-react';
 
 interface Props { questions: FillBlankQuestion[]; documents: LawDocument[] }
 
@@ -98,7 +98,7 @@ export function FillBlankClient({ questions, documents }: Props) {
     <div className="max-w-2xl mx-auto space-y-4 animate-slide-up" key={key}>
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2">
-          <PenLine className="w-5 h-5 text-teal-600" />Điền Chỗ Trống
+          <Pencil className="w-5 h-5 text-teal-600" />Điền Chỗ Trống
         </h1>
         {highScore > 0 && <span className="text-xs bg-teal-50 text-teal-700 px-2.5 py-1 rounded-full font-semibold"><Trophy className="w-3 h-3 inline mr-1" />Kỷ lục: {highScore}/{ROUND_SIZE}</span>}
       </div>
