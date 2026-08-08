@@ -28,7 +28,8 @@ export function MindmapClient() {
         <div className="md:col-span-2 card p-4 max-h-[75vh] overflow-y-auto">
           {map && <NodeTree node={map.root} depth={0} onSelect={setSelected} selected={selected} />}
         </div>
-        <div className="card p-5">
+        {/* Desktop detail panel */}
+        <div className="hidden md:block card p-5">
           {selected ? (
             <div className="animate-slide-up space-y-3">
               <div className="flex items-center gap-2">
@@ -44,6 +45,29 @@ export function MindmapClient() {
               <p className="text-sm">Chọn một nút trong sơ đồ để xem chi tiết pháp lý</p>
             </div>
           )}
+        </div>
+      </div>
+
+      {/* Mobile bottom sheet */}
+      {selected && (
+        <div className="fixed inset-0 z-40 md:hidden" onClick={() => setSelected(null)}>
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+      )}
+      <div className={cn(
+        'fixed inset-x-0 bottom-0 z-50 md:hidden bg-white rounded-t-2xl shadow-2xl border-t border-slate-200 transition-transform duration-300 ease-out',
+        selected ? 'translate-y-0' : 'translate-y-full'
+      )}>
+        <div className="flex items-center justify-between px-5 pt-4 pb-2 border-b border-slate-100">
+          <div className="flex items-center gap-2">
+            <Info className="w-4 h-4 text-indigo-600 shrink-0" />
+            <h3 className="font-bold text-slate-800 text-sm leading-snug">{selected?.label}</h3>
+            {selected?.isNew && <span className="badge-new">Mới 2026</span>}
+          </div>
+          <button onClick={() => setSelected(null)} className="text-slate-400 text-xl leading-none pl-3">✕</button>
+        </div>
+        <div className="px-5 py-4 max-h-[50vh] overflow-y-auto">
+          <p className="text-sm text-slate-700 leading-relaxed">{selected?.details}</p>
         </div>
       </div>
     </div>
