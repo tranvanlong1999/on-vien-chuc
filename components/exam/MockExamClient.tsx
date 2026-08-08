@@ -31,7 +31,7 @@ export function MockExamClient({ questions }: Props) {
   const [rubricChecked, setRubricChecked] = useState<boolean[]>(new Array(RUBRIC.length).fill(false));
   const [mcqScore, setMcqScore] = useState(0);
   const { saveQuizScore, addMistake } = useAppStore();
-  const timerRef = useRef<NodeJS.Timeout>();
+  const timerRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   useEffect(() => {
     if (phase === 'mcq') {
