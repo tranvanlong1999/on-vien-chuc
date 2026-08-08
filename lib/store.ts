@@ -20,6 +20,7 @@ interface AppState extends UserProgress {
   saveQuizScore: (docId: string, score: number) => void;
   addMistake: (questionId: string) => void;
   removeMistake: (questionId: string) => void;
+  recordMistakeAttempt: (questionId: string, correct: boolean) => void;
   masterFlashcard: (cardId: string) => void;
   unmasterFlashcard: (cardId: string) => void;
   updateFlashcardSRS: (cardId: string, quality: number, card: Flashcard) => void;
@@ -37,6 +38,7 @@ const initialProgress: UserProgress = {
   flashcardSRS: {},
   quizScores: {},
   mistakes: [],
+  mistakeHistory: {},
   xp: 0,
   streak: 0,
   lastStudyDate: '',
@@ -108,12 +110,37 @@ export const useAppStore = create<AppState>()(
       addMistake: (questionId) => {
         set((state) => {
           if (state.mistakes.includes(questionId)) return {};
-          return { mistakes: [...state.mistakes, questionId] };
+          return {
+            mistakes: [...state.mistakes, questionId],
+            mistakeHistory: { ...state.mistakeHistory, [questionId]: { correctCount: 0 } },
+          };
         });
       },
 
       removeMistake: (questionId) => {
-        set((state) => ({ mistakes: state.mistakes.filter((id) => id !== questionId) }));
+        set((state) => {
+          const h = { ...state.mistakeHistory };
+          delete h[questionId];
+          return { mistakes: state.mistakes.filter((id) => id !== questionId), mistakeHistory: h };
+        });
+      },
+
+      recordMistakeAttempt: (questionId, correct) => {
+        set((state) => {
+          if (!state.mistakes.includes(questionId)) return {};
+          const prev = state.mistakeHistory[questionId]?.correctCount ?? 0;
+          if (correct) {
+            const next = prev + 1;
+            if (next >= 2) {
+              const h = { ...state.mistakeHistory };
+              delete h[questionId];
+              return { mistakes: state.mistakes.filter((id) => id !== questionId), mistakeHistory: h };
+            }
+            return { mistakeHistory: { ...state.mistakeHistory, [questionId]: { correctCount: next } } };
+          } else {
+            return { mistakeHistory: { ...state.mistakeHistory, [questionId]: { correctCount: 0 } } };
+          }
+        });
       },
 
       masterFlashcard: (cardId) => {

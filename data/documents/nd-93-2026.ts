@@ -10,6 +10,35 @@ export const nd93: LawDocument = {
   color: 'from-orange-500 to-orange-700',
   chapters: [
     {
+      number: 'Chương I',
+      title: 'Quy định chung',
+      articles: [
+        {
+          id: 'nd93-d1',
+          number: 'Điều 1',
+          title: 'Phạm vi điều chỉnh',
+          content: 'Nghị định này quy định chi tiết khoản 5 Điều 12; khoản 6 Điều 14; khoản 4 Điều 15; khoản 3 Điều 16; khoản 4 Điều 17; khoản 4 Điều 19; khoản 4 Điều 20; khoản 4 Điều 22; khoản 4 Điều 25; khoản 5 Điều 27; khoản 2 Điều 28; khoản 3 Điều 29; khoản 2 Điều 41 và hướng dẫn thi hành Luật Nhà giáo số 73/2025/QH15.',
+          summary: [
+            'NĐ 93 quy định chi tiết 13 khoản/điều của Luật Nhà giáo 73/2025/QH15.',
+            'Được ban hành ngày 31/3/2026, có hiệu lực từ ngày ký ban hành.',
+          ],
+          examFocus: 'Nhớ NĐ 93/2026 hướng dẫn thi hành Luật Nhà giáo 73/2025/QH15 (không phải Luật Viên chức). Đây là nghị định chuyên biệt dành riêng cho nhà giáo.',
+          isNew2026: true,
+        },
+        {
+          id: 'nd93-d2',
+          number: 'Điều 2',
+          title: 'Đối tượng áp dụng',
+          content: 'Nghị định này áp dụng đối với nhà giáo theo quy định tại khoản 1 Điều 2 Luật Nhà giáo số 73/2025/QH15, cơ quan quản lý nhà nước về giáo dục, cơ quan quản lý giáo dục, cơ sở giáo dục thuộc hệ thống giáo dục quốc dân và các tổ chức, cá nhân có liên quan.',
+          summary: [
+            'Áp dụng cho: nhà giáo, cơ quan quản lý giáo dục, cơ sở giáo dục quốc dân, tổ chức/cá nhân liên quan.',
+            'Đối tượng nhà giáo xác định theo khoản 1 Điều 2 Luật Nhà giáo 73/2025/QH15.',
+          ],
+          examFocus: 'NĐ 93 áp dụng cho toàn bộ hệ thống giáo dục quốc dân (cả công lập và ngoài công lập). Nhà giáo được định nghĩa theo Luật Nhà giáo 2025.',
+        },
+      ],
+    },
+    {
       number: 'Chương II',
       title: 'Chức danh nhà giáo, bổ nhiệm, thay đổi chức danh',
       articles: [
@@ -70,12 +99,24 @@ export const nd93: LawDocument = {
           id: 'nd93-d7',
           number: 'Điều 7',
           title: 'Thi tuyển nhà giáo',
-          content: 'Thi tuyển nhà giáo được thực hiện theo 02 vòng thi:\n1. Vòng 1: Thi kiểm tra kiến thức chung bằng hình thức trắc nghiệm trên máy vi tính.\na) Phần I: Kiến thức chung, 60 câu hỏi hiểu biết về pháp luật nhà giáo, chủ trương của Đảng, chính sách về ngành Giáo dục, về vị trí việc làm dự tuyển. Thời gian thi 60 phút.\nb) Phần II: Ngoại ngữ, 30 câu hỏi theo yêu cầu của vị trí việc làm (Anh, Nga, Pháp, Đức, Trung Quốc hoặc tiếng dân tộc thiểu số). Thời gian thi 30 phút. Đối với vị trí việc làm không yêu cầu ngoại ngữ trong bản mô tả công việc và khung năng lực thì không phải tổ chức thi Phần II.\nc) Đạt Vòng 1: trả lời đúng từ 50% số câu hỏi trở lên cho từng phần thì được thi tiếp vòng 2.\n2. Vòng 2: Đánh giá năng lực qua thực hành sư phạm.\na) Hình thức thi: vấn đáp, thực hành giảng dạy, hoặc thi viết (trắc nghiệm, tự luận, hoặc kết hợp);\nb) Thời gian: vấn đáp 30 phút (có 15 phút chuẩn bị, không tính vào thời gian thi); thi viết 180 phút (không kể thời gian chép đề);\nc) Thang điểm: 100 điểm.',
+          content: 'Thi tuyển nhà giáo được thực hiện theo 02 vòng thi:\n1. Vòng 1: Thi kiểm tra kiến thức chung bằng hình thức trắc nghiệm trên máy vi tính.\na) Phần I: Kiến thức chung, 60 câu hỏi hiểu biết về pháp luật nhà giáo, chủ trương của Đảng, chính sách về ngành Giáo dục, về vị trí việc làm dự tuyển. Thời gian thi 60 phút.\nb) Phần II: Ngoại ngữ, 30 câu hỏi theo yêu cầu của vị trí việc làm (Anh, Nga, Pháp, Đức, Trung Quốc hoặc tiếng dân tộc thiểu số). Thời gian thi 30 phút. Đối với vị trí việc làm không yêu cầu ngoại ngữ trong bản mô tả công việc và khung năng lực thì không phải tổ chức thi Phần II.\nc) Đạt Vòng 1: trả lời đúng từ 50% số câu hỏi trở lên cho từng phần thì được thi tiếp vòng 2.\nd) Miễn phần thi ngoại ngữ đối với: người có bằng tốt nghiệp chuyên ngành ngoại ngữ; người học ở nước ngoài hoặc học bằng tiếng nước ngoài được công nhận; người có chuẩn đầu ra ngoại ngữ trong bằng tốt nghiệp tương đương hoặc cao hơn yêu cầu.\n2. Vòng 2: Đánh giá năng lực qua thực hành sư phạm.\na) Hình thức thi: vấn đáp, thực hành giảng dạy, hoặc thi viết (trắc nghiệm, tự luận, hoặc kết hợp);\nb) Thời gian: vấn đáp 30 phút (có 15 phút chuẩn bị, không tính vào thời gian thi); thi viết 180 phút (không kể thời gian chép đề);\nc) Thang điểm: 100 điểm.',
           summary: [
             'Vòng 1: 60 câu kiến thức chung (60 phút) + 30 câu ngoại ngữ (30 phút). Đạt khi ≥50% mỗi phần.',
             'Vòng 2: thực hành sư phạm — vấn đáp 30 phút (+ 15 phút chuẩn bị) / thi viết 180 phút. Thang điểm 100.',
           ],
           examFocus: 'Con số quan trọng: Vòng 1 = 60 câu/60 phút + 30 câu/30 phút, đạt ≥50% mỗi phần. Vòng 2 = vấn đáp 30 phút (15 phút chuẩn bị) hoặc thi viết 180 phút.',
+          isNew2026: true,
+        },
+        {
+          id: 'nd93-d8',
+          number: 'Điều 8',
+          title: 'Xét tuyển nhà giáo',
+          content: 'Xét tuyển nhà giáo được thực hiện theo 02 vòng như sau:\n1. Vòng 1: kiểm tra điều kiện dự tuyển tại Phiếu đăng ký dự tuyển theo yêu cầu của vị trí việc làm cần tuyển, nếu đáp ứng đủ thì người dự tuyển được tham dự vòng 2.\na) Hội đồng tuyển dụng kiểm tra việc đáp ứng yêu cầu ngoại ngữ hoặc tiếng dân tộc thiểu số theo thông tin kê khai tại Phiếu đăng ký. Sau khi trúng tuyển, người trúng tuyển nộp bản sao văn bằng, chứng chỉ;\nb) Trường hợp vị trí tuyển yêu cầu ngoại ngữ: cơ quan có thẩm quyền phải thông báo cụ thể yêu cầu về văn bằng, chứng chỉ;\nc) Trường hợp thuộc đối tượng miễn thi ngoại ngữ theo Điều 7: được xác định là đáp ứng yêu cầu;\nd) Trường hợp không thuộc diện miễn: Hội đồng tuyển dụng tổ chức sát hạch năng lực ngoại ngữ theo quy định tại điểm b khoản 1 Điều 7.\n2. Vòng 2: thực hiện theo quy định tại khoản 2 Điều 7 Nghị định này (thực hành sư phạm).',
+          summary: [
+            'Xét tuyển Vòng 1: kiểm tra điều kiện dự tuyển theo Phiếu đăng ký — không thi kiến thức chung.',
+            'Xét tuyển Vòng 2: giống hệt thi tuyển — thực hành sư phạm (vấn đáp/giảng dạy/thi viết).',
+          ],
+          examFocus: 'Phân biệt THI TUYỂN và XÉT TUYỂN: Vòng 1 khác nhau (thi tuyển = trắc nghiệm 60+30 câu; xét tuyển = kiểm tra hồ sơ), nhưng Vòng 2 GIỐNG NHAU (đều phải thực hành sư phạm).',
           isNew2026: true,
         },
         {
@@ -111,10 +152,10 @@ export const nd93: LawDocument = {
           id: 'nd93-d11',
           number: 'Điều 11',
           title: 'Điều động nhà giáo trong các cơ sở giáo dục công lập',
-          content: '1. Thẩm quyền điều động:\na) Chủ tịch UBND cấp xã: điều động nhà giáo trong các trường thuộc thẩm quyền quản lý cấp xã;\nb) Giám đốc Sở GD&ĐT: điều động trong tỉnh, kể cả giữa các trường thuộc 2 xã khác nhau và từ trường về cơ quan quản lý giáo dục cấp tỉnh;\nc) Cơ quan có thẩm quyền quản lý cơ sở giáo dục khác: quyết định điều động theo quy định.\n2. Đối tượng điều động: biên chế dôi dư khi sắp xếp cơ sở giáo dục; nhà giáo có nguyện vọng đến vùng khó khăn; đã hoàn thành thời gian ở vùng khó khăn; năng lực tốt hỗ trợ chất lượng; được quy hoạch, bổ nhiệm cán bộ quản lý.\n4. Thời hạn xử lý hồ sơ điều động: trong 30 ngày làm việc tính từ ngày nhận đủ hồ sơ hợp lệ, cơ quan có thẩm quyền ra quyết định điều động.',
+          content: '1. Thẩm quyền điều động:\na) Chủ tịch UBND cấp xã: điều động nhà giáo trong các trường thuộc thẩm quyền quản lý cấp xã;\nb) Giám đốc Sở GD&ĐT: điều động trong tỉnh, kể cả giữa các trường thuộc 2 xã khác nhau và từ trường về cơ quan quản lý giáo dục cấp tỉnh;\nc) Cơ quan có thẩm quyền quản lý cơ sở giáo dục khác: quyết định điều động theo quy định.\n2. Đối tượng điều động: biên chế dôi dư khi sắp xếp cơ sở giáo dục; nhà giáo có nguyện vọng đến vùng khó khăn; đã hoàn thành thời gian ở vùng khó khăn; năng lực tốt hỗ trợ chất lượng; được quy hoạch, bổ nhiệm cán bộ quản lý; hỗ trợ cơ sở đang thiếu nhà giáo.\n3. Chế độ khi điều động: nhà giáo giữ chức vụ CBQL được bảo lưu phụ cấp chức vụ; chế độ tính theo nơi điều động đến; nếu chế độ cũ cao hơn thì được bảo lưu.\n4. Thời hạn xử lý hồ sơ điều động: trong 30 ngày làm việc tính từ ngày nhận đủ hồ sơ hợp lệ, cơ quan có thẩm quyền ra quyết định điều động.',
           summary: [
             'Thẩm quyền điều động: UBND xã (trường xã) → Sở GD&ĐT (trong tỉnh). Thời hạn xử lý: 30 ngày làm việc.',
-            '5 đối tượng được điều động: dôi dư, tự nguyện vùng khó, hoàn thành vùng khó, năng lực tốt, quy hoạch bổ nhiệm.',
+            '6 đối tượng được điều động: dôi dư, tự nguyện vùng khó, hoàn thành vùng khó, năng lực tốt, quy hoạch bổ nhiệm, hỗ trợ cơ sở thiếu.',
           ],
           examFocus: 'Điều động: 30 ngày làm việc. Thẩm quyền theo cấp quản lý (xã→Sở). Phân biệt với thuyên chuyển (theo nguyện vọng, cần đồng ý 2 bên).',
           isNew2026: true,
@@ -171,10 +212,22 @@ export const nd93: LawDocument = {
           isNew2026: true,
         },
         {
+          id: 'nd93-d16',
+          number: 'Điều 16',
+          title: 'Chính sách thu hút, trọng dụng đối với nhà giáo',
+          content: '1. Chính sách và tiêu chuẩn, điều kiện hưởng chính sách thu hút, trọng dụng đối với các đối tượng tại các điểm a, b, c, d, e và g khoản 1 Điều 15 Nghị định này được áp dụng theo quy định tại Nghị định số 179/2024/NĐ-CP.\n2. Chính sách thu hút đối với nhà giáo đến vùng ĐBDTTS, miền núi, biên giới, hải đảo (điểm đ khoản 1 Điều 15):\na) Được tuyển dụng theo hình thức TIẾP NHẬN và KHÔNG YÊU CẦU điều kiện thời gian công tác theo quy định của pháp luật về tiếp nhận viên chức;\nb) Được hưởng chính sách đối với cán bộ, công chức, viên chức công tác ở vùng có điều kiện kinh tế - xã hội đặc biệt khó khăn theo quy định.\n3. Ngoài các chính sách trên, đối tượng thu hút còn được hưởng các chế độ, chính sách khác theo quy định của địa phương, cơ sở giáo dục.',
+          summary: [
+            'Thu hút vùng khó: được tiếp nhận KHÔNG qua thi/xét tuyển, KHÔNG cần đủ thời gian công tác.',
+            'Hầu hết đối tượng còn lại áp dụng chính sách theo NĐ 179/2024 về người có tài năng.',
+          ],
+          examFocus: 'Thu hút vùng khó (điểm đ): đặc quyền kép — tiếp nhận (không thi) + miễn điều kiện thời gian công tác. Đây là điểm mới nổi bật hay ra thi.',
+          isNew2026: true,
+        },
+        {
           id: 'nd93-d17',
           number: 'Điều 17',
           title: 'Thời gian nghỉ hè của nhà giáo',
-          content: '1. Thời gian nghỉ hè hằng năm của nhà giáo:\na) Nhà giáo trong cơ sở giáo dục mầm non, cơ sở giáo dục phổ thông, trường chuyên biệt: 08 tuần, bao gồm cả nghỉ phép hằng năm;\nb) Nhà giáo trong cơ sở giáo dục thường xuyên: tối thiểu 04 tuần, tối đa 08 tuần, bao gồm cả nghỉ phép hằng năm;\nc) Nhà giáo trong trường dự bị đại học: 08 tuần;\nd) Nhà giáo giảng dạy trung học nghề, trình độ trung cấp, cao đẳng: 06 tuần; trình độ sơ cấp: 04 tuần; bao gồm cả nghỉ phép hằng năm;\nđ) Nhà giáo trong cơ sở giáo dục đại học và trường chính trị: theo quy chế của cơ sở giáo dục.\ng) Trong thời gian nghỉ hè, nhà giáo được hưởng nguyên lương và phụ cấp theo quy định.',
+          content: '1. Thời gian nghỉ hè hằng năm của nhà giáo:\na) Nhà giáo trong cơ sở giáo dục mầm non, cơ sở giáo dục phổ thông, trường chuyên biệt: 08 tuần, bao gồm cả nghỉ phép hằng năm;\nb) Nhà giáo trong cơ sở giáo dục thường xuyên: tối thiểu 04 tuần, tối đa 08 tuần, bao gồm cả nghỉ phép hằng năm;\nc) Nhà giáo trong trường dự bị đại học: 08 tuần;\nd) Nhà giáo giảng dạy trung học nghề, trình độ trung cấp, cao đẳng: 06 tuần; trình độ sơ cấp: 04 tuần; bao gồm cả nghỉ phép hằng năm;\nđ) Nhà giáo trong cơ sở giáo dục đại học và trường chính trị: theo quy chế của cơ sở giáo dục.\ne) Trường hợp đột xuất, khẩn cấp (thiên tai, dịch bệnh): Bộ trưởng GD&ĐT quyết định thời gian nghỉ hè của MN/PT/GDTX; người đứng đầu cơ sở quyết định cho các cấp khác.\ng) Trong thời gian nghỉ hè, nhà giáo được hưởng nguyên lương và phụ cấp theo quy định.\n2. Ngoài nghỉ hè, nhà giáo được nghỉ lễ, tết và các ngày nghỉ khác theo Bộ luật Lao động.\n3. Chủ tịch UBND tỉnh quyết định thời điểm nghỉ hè của nhà giáo MN/PT/GDTX/Chuyên biệt trên địa bàn.',
           summary: [
             'Nghỉ hè: Mầm non/Phổ thông = 8 tuần; GDTX = 4-8 tuần; Trung cấp/CĐ = 6 tuần; Sơ cấp = 4 tuần.',
             'Trong thời gian nghỉ hè, nhà giáo được hưởng NGUYÊN LƯƠNG và phụ cấp.',
@@ -193,6 +246,18 @@ export const nd93: LawDocument = {
           ],
           examFocus: 'Quy trình nghỉ hưu muộn: nộp hồ sơ trước 6 tháng → xét trong 30 ngày làm việc → thông báo quyết định trước 3 tháng. Ba mốc này hay ra thi.',
         },
+        {
+          id: 'nd93-d19',
+          number: 'Điều 19',
+          title: 'Nghỉ hưu ở tuổi cao hơn đối với nhà giáo ngành, lĩnh vực chuyên sâu đặc thù',
+          content: '1. Nhà giáo làm việc trong ngành, lĩnh vực chuyên sâu đặc thù thuộc lĩnh vực y tế, văn hóa, nghệ thuật, thể dục, thể thao — trường hợp không có chức danh giáo sư, phó giáo sư hoặc không có trình độ tiến sĩ nhưng có trình độ chuyên môn, nghiệp vụ phù hợp với đặc thù của ngành, lĩnh vực — có thể được hưởng chế độ nghỉ hưu ở tuổi cao hơn.\n2. Thời gian nghỉ hưu ở tuổi cao hơn đối với nhà giáo trong ngành, lĩnh vực chuyên sâu đặc thù thuộc lĩnh vực y tế, văn hóa, nghệ thuật, thể dục, thể thao: không quá 05 tuổi.\n3. Bộ trưởng Bộ Y tế, Bộ trưởng Bộ Văn hóa, Thể thao và Du lịch quy định chi tiết yêu cầu về đối tượng, tiêu chuẩn, điều kiện đối với nhà giáo được hưởng chế độ này.',
+          summary: [
+            'Nhà giáo ngành đặc thù (y tế, văn hóa, nghệ thuật, thể thao): có thể nghỉ hưu muộn hơn tối đa 5 TUỔI dù không có GS/PGS hay tiến sĩ.',
+            'Bộ Y tế và Bộ VHTT&DL quy định chi tiết điều kiện cụ thể.',
+          ],
+          examFocus: 'Ngành đặc thù: nghỉ hưu muộn tối đa +5 tuổi. Không cần GS/PGS/tiến sĩ nhưng phải có chuyên môn phù hợp. Bộ Y tế và Bộ VHTT&DL quy định — không phải Bộ GD&ĐT.',
+          isNew2026: true,
+        },
       ],
     },
     {
@@ -203,7 +268,7 @@ export const nd93: LawDocument = {
           id: 'nd93-d20',
           number: 'Điều 20',
           title: 'Trình độ chuẩn được đào tạo của nhà giáo (trường hợp đặc biệt)',
-          content: '2. Trường hợp đặc biệt - nhà giáo dạy môn Mĩ thuật, Âm nhạc, Nghệ thuật, Ngoại ngữ cấp tiểu học, Tin học và Công nghệ trong cơ sở giáo dục phổ thông, cơ sở giáo dục thường xuyên, trường chuyên biệt: có bằng tốt nghiệp cao đẳng trở lên thuộc ngành đào tạo giáo viên phù hợp với môn học đặc thù hoặc có bằng tốt nghiệp cao đẳng trở lên các ngành phù hợp và có chứng chỉ bồi dưỡng nghiệp vụ sư phạm tương ứng với cấp học giảng dạy.\n8. Sau khi được tuyển dụng theo các trường hợp đặc biệt (trình độ thấp hơn Cử nhân), nhà giáo phải tham gia đào tạo đáp ứng trình độ chuẩn tương ứng với cấp học theo kế hoạch của địa phương và cơ sở giáo dục.',
+          content: '2. Trường hợp đặc biệt - nhà giáo dạy môn Mĩ thuật, Âm nhạc, Nghệ thuật, Ngoại ngữ cấp tiểu học, Tin học và Công nghệ trong cơ sở giáo dục phổ thông, cơ sở giáo dục thường xuyên, trường chuyên biệt: có bằng tốt nghiệp cao đẳng trở lên thuộc ngành đào tạo giáo viên phù hợp với môn học đặc thù hoặc có bằng tốt nghiệp cao đẳng trở lên các ngành phù hợp và có chứng chỉ bồi dưỡng nghiệp vụ sư phạm tương ứng với cấp học giảng dạy.\n3. Nhà giáo dạy tiếng dân tộc thiểu số trong cơ sở giáo dục đại học: đáp ứng một trong các yêu cầu: bằng ĐH trở lên ngành ĐTGV về tiếng DTTS; bằng ThS trở lên ngành ĐTGV + chứng chỉ tiếng DTTS; bằng ĐH trở lên ngành ngôn ngữ tiếng DTTS; hoặc là người DTTS có bằng ĐH sử dụng được tiếng DTTS phù hợp.\n4. Nhà giáo dạy tiếng DTTS trong cơ sở giáo dục phổ thông, nghề nghiệp, GDTX, CĐ sư phạm, chuyên biệt: có thể dùng bằng CĐ trở lên + chứng chỉ NVSP hoặc người DTTS biết tiếng DTTS phù hợp.\n6. Nhà giáo đào tạo, bồi dưỡng trong trường của cơ quan nhà nước, tổ chức chính trị: bằng ĐH trở lên phù hợp với VTVL và chuyên ngành giảng dạy.\n8. Sau khi được tuyển dụng theo các trường hợp đặc biệt (trình độ thấp hơn Cử nhân), nhà giáo phải tham gia đào tạo đáp ứng trình độ chuẩn tương ứng với cấp học theo kế hoạch của địa phương và cơ sở giáo dục.',
           summary: [
             'Trường hợp đặc biệt (Âm nhạc, Mĩ thuật, Ngoại ngữ tiểu học...): có thể chỉ cần cao đẳng + chứng chỉ NVSP.',
             'Sau khi tuyển dụng trường hợp đặc biệt: phải đào tạo lên Cử nhân theo lộ trình.',
@@ -222,6 +287,68 @@ export const nd93: LawDocument = {
           ],
           examFocus: 'Thời gian các loại bồi dưỡng: Chuẩn nghề nghiệp = 6 tuần; Quản lý = 1 tuần; Thường xuyên = 3 tuần/năm. Ba con số này rất hay ra thi.',
           isNew2026: true,
+        },
+        {
+          id: 'nd93-d22',
+          number: 'Điều 22',
+          title: 'Thẩm quyền quản lý chương trình đào tạo, bồi dưỡng nhà giáo',
+          content: '1. Bộ trưởng Bộ Giáo dục và Đào tạo xây dựng, ban hành và hướng dẫn việc tổ chức:\na) Chương trình bồi dưỡng chuẩn nghề nghiệp nhà giáo;\nb) Chương trình bồi dưỡng thường xuyên nhà giáo theo các chức danh nhà giáo;\nc) Chương trình bồi dưỡng nghiệp vụ quản lý giáo dục đối với nhà giáo trong các cơ sở giáo dục (trừ cơ sở thuộc Bộ Công an, Bộ Quốc phòng).\n2. Bộ trưởng Bộ Công an, Bộ trưởng Bộ Quốc phòng xây dựng, ban hành và quản lý các chương trình bồi dưỡng nhà giáo thuộc thẩm quyền quản lý.',
+          summary: [
+            'Bộ GD&ĐT quản lý 3 loại chương trình bồi dưỡng: chuẩn nghề nghiệp, thường xuyên, nghiệp vụ quản lý.',
+            'Bộ Công an và Bộ Quốc phòng tự ban hành chương trình bồi dưỡng cho cơ sở giáo dục thuộc mình.',
+          ],
+          examFocus: 'Thẩm quyền chương trình bồi dưỡng: Bộ GD&ĐT cho hầu hết; Bộ CA và BQP cho cơ sở thuộc mình. Không có phân cấp cho Sở GD&ĐT hay UBND tỉnh ở điều này.',
+        },
+        {
+          id: 'nd93-d23',
+          number: 'Điều 23',
+          title: 'Kinh phí đào tạo, bồi dưỡng nhà giáo',
+          content: '1. Kinh phí đào tạo, bồi dưỡng nhà giáo:\na) Nhà nước hỗ trợ kinh phí theo quy hoạch, kế hoạch và lộ trình được phê duyệt; nguồn dự toán trong ngân sách chi sự nghiệp giáo dục;\nb) Khuyến khích cơ sở giáo dục sử dụng Quỹ phát triển sự nghiệp và các nguồn thu hợp pháp khác hỗ trợ đào tạo nâng cao và bồi dưỡng thường xuyên;\nc) Khuyến khích tổ chức, cá nhân tài trợ kinh phí đào tạo, bồi dưỡng;\nd) Nhà giáo tự chi trả cho các chương trình học theo nhu cầu cá nhân không nằm trong quy hoạch, kế hoạch.\n2. Chế độ khi được cử đi đào tạo, bồi dưỡng:\na) Được hưởng NGUYÊN LƯƠNG, phụ cấp và các chế độ khác; thời gian đào tạo, bồi dưỡng được tính vào thời gian công tác liên tục;\nb) Nếu tự ý bỏ học, thôi việc hoặc không phục vụ đủ thời gian cam kết thì phải ĐỀN BÙ chi phí đào tạo, bồi dưỡng theo quy định.',
+          summary: [
+            'Nhà nước hỗ trợ kinh phí đào tạo, bồi dưỡng theo kế hoạch; cá nhân tự trả nếu học ngoài kế hoạch.',
+            'Được cử đi học: hưởng nguyên lương, thời gian tính công tác. Vi phạm cam kết: phải đền bù.',
+          ],
+          examFocus: 'Chế độ khi được cử đi học: nguyên lương + thời gian tính công tác liên tục. Vi phạm cam kết → đền bù chi phí. Tự học ngoài kế hoạch → tự chi trả.',
+        },
+      ],
+    },
+    {
+      number: 'Chương VII',
+      title: 'Điều khoản thi hành',
+      articles: [
+        {
+          id: 'nd93-d24',
+          number: 'Điều 24',
+          title: 'Hiệu lực thi hành',
+          content: '1. Nghị định này có hiệu lực thi hành kể từ ngày ký ban hành (31/3/2026), trừ trường hợp quy định tại khoản 2 và khoản 3.\n2. Việc đánh giá mức độ hoàn thành nhiệm vụ theo chuẩn nghề nghiệp tương ứng các chức danh nhà giáo quy định tại Điều 3 Nghị định này được thực hiện từ năm học 2026 - 2027.\n3. Việc bồi dưỡng theo tiêu chuẩn, chức danh, chức vụ lãnh đạo, quản lý quy định tại khoản 3 Điều 21 Nghị định này được thực hiện đối với nhà giáo được quy hoạch, bổ nhiệm từ ngày Nghị định có hiệu lực. Người được bổ nhiệm phải hoàn thành bồi dưỡng trong vòng 24 THÁNG kể từ ngày có quyết định bổ nhiệm.',
+          summary: [
+            'Hiệu lực: từ ngày ký 31/3/2026; riêng đánh giá theo chuẩn nghề nghiệp áp dụng từ năm học 2026-2027.',
+            'Bồi dưỡng quản lý: người được bổ nhiệm phải hoàn thành trong 24 tháng kể từ ngày bổ nhiệm.',
+          ],
+          examFocus: 'Ba mốc quan trọng: NĐ hiệu lực từ 31/3/2026; đánh giá chuẩn nghề nghiệp từ năm học 2026-2027; bồi dưỡng quản lý hoàn thành trong 24 tháng sau bổ nhiệm.',
+          isNew2026: true,
+        },
+        {
+          id: 'nd93-d25',
+          number: 'Điều 25',
+          title: 'Điều khoản chuyển tiếp',
+          content: '1. Trường hợp đã được phê duyệt đề án, kế hoạch tổ chức tuyển dụng, tiếp nhận, xét thăng hạng chức danh nghề nghiệp nhà giáo trước ngày 30/6/2026 thì được tiếp tục thực hiện đến hết ngày 31/12/2026 theo đề án đã duyệt.\n2. Nhà giáo đã được điều động, thuyên chuyển, phân công dạy liên trường kể từ ngày 01/01/2026 thì được tiếp tục thực hiện theo quyết định đã ban hành và được hưởng chế độ theo Nghị định này từ ngày 01/01/2026.\n3. Nhà giáo đủ điều kiện nghỉ hưu ở tuổi cao hơn từ 01/4/2026 đến 30/6/2026 mà chưa thông báo thì cấp có thẩm quyền ban hành quyết định kéo dài thời gian công tác từ ngày NĐ có hiệu lực.\n4. Trong thời gian chưa có hướng dẫn mới về xếp lương theo VTVL, việc xếp lương các chức danh nhà giáo theo hướng dẫn của Bộ trưởng Bộ GD&ĐT.',
+          summary: [
+            'Đề án tuyển dụng đã duyệt trước 30/6/2026: được thực hiện đến hết 31/12/2026.',
+            'Điều động/thuyên chuyển từ 01/01/2026: được hưởng chế độ mới theo NĐ 93 từ ngày 01/01/2026.',
+          ],
+          examFocus: 'Điều khoản chuyển tiếp: đề án cũ → hết hạn 31/12/2026; điều động từ 01/01 → hưởng chế độ mới từ 01/01. Lộ trình rõ ràng, hay ra dạng câu hỏi xác định thời hạn.',
+          isNew2026: true,
+        },
+        {
+          id: 'nd93-d26',
+          number: 'Điều 26',
+          title: 'Trách nhiệm thi hành',
+          content: 'Bộ trưởng, Thủ trưởng cơ quan ngang bộ, Thủ trưởng cơ quan thuộc Chính phủ, Chủ tịch Ủy ban nhân dân các tỉnh, thành phố trực thuộc trung ương, Thủ trưởng cơ quan quản lý giáo dục và đào tạo, đơn vị sử dụng nhà giáo chịu trách nhiệm thi hành Nghị định này.',
+          summary: [
+            'Trách nhiệm thi hành thuộc về: Bộ trưởng, cơ quan ngang bộ, UBND tỉnh, cơ quan quản lý GD&ĐT, đơn vị sử dụng nhà giáo.',
+          ],
+          examFocus: 'Điều 26 xác định chuỗi trách nhiệm từ cấp Trung ương (Bộ) xuống địa phương (UBND tỉnh) và trực tiếp đến đơn vị sử dụng nhà giáo.',
         },
       ],
     },

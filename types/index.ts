@@ -81,6 +81,7 @@ export interface UserProgress {
   quizScores: Record<string, number>;
   // Mistakes
   mistakes: string[];
+  mistakeHistory: Record<string, { correctCount: number }>;
   // Gamification
   xp: number;
   streak: number;
