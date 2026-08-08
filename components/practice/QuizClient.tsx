@@ -16,7 +16,7 @@ export function QuizClient({ questions, documents }: Props) {
   const params = useSearchParams();
   const [docId, setDocId] = useState(params.get('doc') || 'all');
   const [mode, setMode] = useState<Mode>('all');
-  const { quizScores, mistakes, mistakeHistory, saveQuizScore, addMistake, recordMistakeAttempt } = useAppStore();
+  const { quizScores, mistakes, mistakeHistory, saveQuizScore, addMistake, recordMistakeAttempt, addXP } = useAppStore();
 
   const deck = useMemo(() => {
     let pool: QuizQuestion[];
@@ -45,6 +45,7 @@ export function QuizClient({ questions, documents }: Props) {
     const correct = i === q.correctAnswer;
     if (correct) {
       setScore((s) => s + 1);
+      addXP(5, 'correctAnswer');
       if (isMistakeCard) recordMistakeAttempt(q.id, true);
     } else {
       addMistake(q.id);
@@ -54,7 +55,7 @@ export function QuizClient({ questions, documents }: Props) {
 
   const next = () => {
     if (idx + 1 >= deck.length) {
-      const finalScore = Math.round(((score + (isCorrect ? 1 : 0)) / deck.length) * 10);
+      const finalScore = Math.round((score / deck.length) * 10);
       saveQuizScore(docId, finalScore);
       setDone(true);
     } else {

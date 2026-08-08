@@ -90,6 +90,28 @@ export interface UserProgress {
   lastXPDate: string;
   // Planner
   plannerChecked: boolean[];
+  // Games
+  gameHighScores: Record<string, number>; // 'speedQuiz' | 'wordMatch' | 'fillBlank'
+  dailyChallengeCompleted: Record<string, boolean>; // '2026-08-08' -> true
+  bossDefeated: string[]; // docIds of defeated bosses
+  bossHP: Record<string, number>; // docId -> current HP
+  achievements: string[]; // achievement IDs earned
+}
+
+export interface FillBlankQuestion {
+  id: string;
+  docId: string;
+  sentence: string;
+  blank: string;
+  hint?: string;
+  articleRef: string;
+}
+
+export interface MatchPair {
+  id: string;
+  term: string;
+  definition: string;
+  docId: string;
 }
 
 

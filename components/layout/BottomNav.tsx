@@ -2,14 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BookOpen, Layers, FileText, GitBranch, BarChart2, MessageSquare } from 'lucide-react';
+import { Home, BookOpen, Layers, FileText, GitBranch, BarChart2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
   { href: '/', icon: Home, label: 'Trang chủ' },
   { href: '/hoc', icon: BookOpen, label: 'Học' },
-  { href: '/luyen-tap/flashcards', icon: Layers, label: 'Luyện tập' },
-  { href: '/luyen-tap/tinh-huong', icon: MessageSquare, label: 'Tình huống' },
+  { href: '/luyen-tap', icon: Layers, label: 'Luyện tập' },
   { href: '/de-thi', icon: FileText, label: 'Đề thi' },
   { href: '/so-do', icon: GitBranch, label: 'Sơ đồ' },
   { href: '/tien-do', icon: BarChart2, label: 'Tiến độ' },

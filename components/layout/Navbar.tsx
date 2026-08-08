@@ -10,8 +10,7 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { href: '/', label: 'Tổng quan' },
   { href: '/hoc', label: 'Học' },
-  { href: '/luyen-tap/flashcards', label: 'Luyện tập' },
-  { href: '/luyen-tap/tinh-huong', label: 'Tình huống' },
+  { href: '/luyen-tap', label: 'Luyện tập' },
   { href: '/de-thi', label: 'Đề thi' },
   { href: '/so-do', label: 'Sơ đồ' },
   { href: '/tien-do', label: 'Tiến độ' },

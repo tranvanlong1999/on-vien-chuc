@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import { LawDocument, LawArticle } from '@/types';
-import { Search, CheckCircle2, Circle, BookOpen, Star, ChevronRight } from 'lucide-react';
+import { Search, CheckCircle2, Circle, BookOpen, Star, ChevronRight, ChevronLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface Props { documents: LawDocument[] }
@@ -32,12 +32,12 @@ export function StudyGuideClient({ documents }: Props) {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className={cn("flex items-center justify-between", selectedArticle ? "hidden md:flex" : "flex")}>
         <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2"><BookOpen className="w-5 h-5 text-indigo-600" />Đọc Điều Luật</h1>
       </div>
 
       {/* Doc selector */}
-      <div className="flex gap-2 flex-wrap">
+      <div className={cn("flex gap-2 flex-wrap", selectedArticle ? "hidden md:flex" : "flex")}>
         {documents.map((d) => (
           <button key={d.id} onClick={() => { setSelectedDocId(d.id); setSelectedArticle(null); }}
             className={cn('px-3 py-1.5 rounded-full text-xs font-semibold border transition-colors', selectedDocId === d.id ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-600 border-slate-200 hover:border-indigo-300')}>
@@ -47,7 +47,7 @@ export function StudyGuideClient({ documents }: Props) {
       </div>
 
       {/* Search */}
-      <div className="relative">
+      <div className={cn("relative", selectedArticle ? "hidden md:block" : "block")}>
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
         <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Tìm kiếm điều khoản..."
           className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300 bg-white" />
@@ -55,7 +55,7 @@ export function StudyGuideClient({ documents }: Props) {
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
         {/* TOC */}
-        <div className="md:col-span-2 space-y-3 max-h-[70vh] overflow-y-auto pr-1">
+        <div className={cn("md:col-span-2 space-y-3 max-h-[70vh] overflow-y-auto pr-1", selectedArticle ? "hidden md:block" : "block")}>
           {filtered.map((ch) => (
             <div key={ch.number} className="card p-3">
               <p className="text-xs font-bold text-slate-500 uppercase mb-2">{ch.number} — {ch.title}</p>
@@ -64,7 +64,12 @@ export function StudyGuideClient({ documents }: Props) {
                   const isRead = readIds.includes(article.id);
                   const isActive = selectedArticle?.id === article.id;
                   return (
-                    <button key={article.id} onClick={() => setSelectedArticle(article)}
+                    <button key={article.id} onClick={() => {
+                      setSelectedArticle(article);
+                      if (typeof window !== 'undefined' && window.innerWidth < 768) {
+                        window.scrollTo(0, 0);
+                      }
+                    }}
                       className={cn('w-full flex items-center gap-2 text-left px-2.5 py-1.5 rounded-lg text-sm transition-colors', isActive ? 'bg-indigo-50 text-indigo-700' : 'hover:bg-slate-50 text-slate-700')}>
                       {isRead ? <CheckCircle2 className="w-3.5 h-3.5 text-green-500 shrink-0" /> : <Circle className="w-3.5 h-3.5 text-slate-300 shrink-0" />}
                       <span className="truncate">{article.number} — {article.title}</span>
@@ -79,7 +84,15 @@ export function StudyGuideClient({ documents }: Props) {
         </div>
 
         {/* Article detail */}
-        <div className="md:col-span-3">
+        <div className={cn("md:col-span-3", selectedArticle ? "block" : "hidden md:block")}>
+          {selectedArticle && (
+            <button
+              onClick={() => setSelectedArticle(null)}
+              className="flex md:hidden items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors mb-4"
+            >
+              <ChevronLeft className="w-4 h-4" /> Quay lại danh sách điều khoản
+            </button>
+          )}
           {selectedArticle ? (
             <ArticleView article={selectedArticle} isRead={readIds.includes(selectedArticle.id)} onToggleRead={() => toggleArticleRead(doc.id, selectedArticle.id)} />
           ) : (

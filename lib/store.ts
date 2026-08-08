@@ -12,6 +12,12 @@ const XP_REWARDS = {
   masterFlashcard: 15,
   completeMockExam: 100,
   dailyLogin: 20,
+  speedQuizBonus: 30,
+  wordMatchBonus: 25,
+  fillBlankCorrect: 8,
+  dailyChallenge: 50,
+  bossDefeated: 150,
+  achievementUnlock: 100,
 };
 
 interface AppState extends UserProgress {
@@ -27,6 +33,11 @@ interface AppState extends UserProgress {
   addXP: (amount: number, reason: keyof typeof XP_REWARDS) => void;
   checkAndUpdateStreak: () => void;
   setPlannerChecked: (checked: boolean[]) => void;
+  saveGameHighScore: (game: string, score: number) => void;
+  completeDailyChallenge: (dateKey: string) => void;
+  defeatBoss: (docId: string) => void;
+  updateBossHP: (docId: string, hp: number) => void;
+  unlockAchievement: (id: string) => void;
   resetProgress: () => void;
   syncToCloud: () => Promise<void>;
   loadFromCloud: () => Promise<void>;
@@ -45,6 +56,11 @@ const initialProgress: UserProgress = {
   dailyXP: 0,
   lastXPDate: '',
   plannerChecked: new Array(7).fill(false),
+  gameHighScores: {},
+  dailyChallengeCompleted: {},
+  bossDefeated: [],
+  bossHP: {},
+  achievements: [],
 };
 
 async function syncProgressToSupabase(state: UserProgress) {
@@ -201,6 +217,45 @@ export const useAppStore = create<AppState>()(
 
       setPlannerChecked: (checked) => {
         set({ plannerChecked: checked });
+        debouncedSync(get());
+      },
+
+      saveGameHighScore: (game, score) => {
+        set((state) => {
+          if ((state.gameHighScores[game] ?? 0) >= score) return {};
+          return { gameHighScores: { ...state.gameHighScores, [game]: score } };
+        });
+        debouncedSync(get());
+      },
+
+      completeDailyChallenge: (dateKey) => {
+        set((state) => {
+          if (state.dailyChallengeCompleted[dateKey]) return {};
+          get().addXP(XP_REWARDS.dailyChallenge, 'dailyChallenge');
+          return { dailyChallengeCompleted: { ...state.dailyChallengeCompleted, [dateKey]: true } };
+        });
+        debouncedSync(get());
+      },
+
+      defeatBoss: (docId) => {
+        set((state) => {
+          if (state.bossDefeated.includes(docId)) return {};
+          get().addXP(XP_REWARDS.bossDefeated, 'bossDefeated');
+          return { bossDefeated: [...state.bossDefeated, docId], bossHP: { ...state.bossHP, [docId]: 100 } };
+        });
+        debouncedSync(get());
+      },
+
+      updateBossHP: (docId, hp) => {
+        set((state) => ({ bossHP: { ...state.bossHP, [docId]: hp } }));
+      },
+
+      unlockAchievement: (id) => {
+        set((state) => {
+          if (state.achievements.includes(id)) return {};
+          get().addXP(XP_REWARDS.achievementUnlock, 'achievementUnlock');
+          return { achievements: [...state.achievements, id] };
+        });
         debouncedSync(get());
       },
 
