@@ -141,4 +141,436 @@ export const quizQuestions: QuizQuestion[] = [
     correctAnswer: 2,
     explanation: 'Khoản 2c Điều 26 Luật Viên chức 2025: Căn cứ kết quả đánh giá xếp loại, cơ quan có thẩm quyền xem xét, bố trí vào vị trí việc làm phù hợp ở trình độ thấp hơn hoặc cho thôi việc đối với trường hợp không hoàn thành nhiệm vụ - không phải tự động buộc thôi việc.'
   },
+
+  // ===== LUẬT NHÀ GIÁO 73/2025 — câu 21–30 =====
+  {
+    id: 'q-21', docId: 'luat-nha-giao', difficulty: 'easy',
+    question: 'Theo Luật Nhà giáo số 73/2025/QH15, nhà giáo được nghỉ hè bao nhiêu tuần mỗi năm?',
+    options: ['4 tuần', '6 tuần', '8 tuần', '10 tuần'],
+    correctAnswer: 2,
+    explanation: 'Điều 24 Luật Nhà giáo 2025 quy định nhà giáo được nghỉ hè 8 tuần mỗi năm học, đây là quy định mới so với trước đây. Thời gian nghỉ hè được tính vào thời gian làm việc.'
+  },
+  {
+    id: 'q-22', docId: 'luat-nha-giao', difficulty: 'medium',
+    question: 'Thời hiệu xử lý kỷ luật nhà giáo vi phạm thông thường theo Luật Nhà giáo 2025 là bao lâu?',
+    options: ['2 năm kể từ thời điểm phát hiện vi phạm.', '3 năm kể từ thời điểm xảy ra vi phạm.', '5 năm kể từ thời điểm xảy ra vi phạm.', '10 năm đối với mọi hành vi vi phạm.'],
+    correctAnswer: 2,
+    explanation: 'Theo Điều 42 Luật Nhà giáo 2025, thời hiệu xử lý kỷ luật nhà giáo là 5 năm kể từ thời điểm xảy ra vi phạm (trừ vi phạm về tham nhũng hoặc gây hậu quả đặc biệt nghiêm trọng là 10 năm).'
+  },
+  {
+    id: 'q-23', docId: 'luat-nha-giao', difficulty: 'medium',
+    question: 'Luật Nhà giáo 2025 quy định có bao nhiêu hình thức kỷ luật đối với nhà giáo?',
+    options: ['2 hình thức: cảnh cáo và buộc thôi việc.', '3 hình thức: khiển trách, cảnh cáo, buộc thôi việc.', '4 hình thức: khiển trách, cảnh cáo, hạ bậc lương, buộc thôi việc.', '5 hình thức: khiển trách, cảnh cáo, hạ bậc lương, cách chức, buộc thôi việc.'],
+    correctAnswer: 2,
+    explanation: 'Điều 41 Luật Nhà giáo 2025 quy định 4 hình thức kỷ luật đối với nhà giáo không giữ chức vụ quản lý: (1) Khiển trách; (2) Cảnh cáo; (3) Hạ bậc lương; (4) Buộc thôi việc. Nhà giáo giữ chức vụ quản lý còn có thêm hình thức cách chức.'
+  },
+  {
+    id: 'q-24', docId: 'luat-nha-giao', difficulty: 'easy',
+    question: 'Theo Luật Nhà giáo 2025, chứng chỉ hành nghề nhà giáo do cơ quan nào cấp?',
+    options: ['Ủy ban nhân dân tỉnh/thành phố nơi nhà giáo công tác.', 'Sở Giáo dục và Đào tạo địa phương.', 'Bộ Giáo dục và Đào tạo.', 'Hội đồng nhân dân tỉnh theo phân cấp.'],
+    correctAnswer: 2,
+    explanation: 'Theo Điều 16 Luật Nhà giáo 2025, Bộ Giáo dục và Đào tạo là cơ quan có thẩm quyền cấp chứng chỉ hành nghề nhà giáo trên toàn quốc, đảm bảo tính thống nhất trong quản lý chất lượng nhà giáo.'
+  },
+  {
+    id: 'q-25', docId: 'luat-nha-giao', difficulty: 'medium',
+    question: 'Hành vi nào sau đây bị nghiêm cấm đối với nhà giáo theo Luật Nhà giáo 2025?',
+    options: ['Yêu cầu học sinh làm bài tập nâng cao ngoài chương trình chuẩn.', 'Tổ chức hoạt động ngoại khóa tự nguyện ngoài giờ học chính thức.', 'Xúc phạm danh dự, bạo hành, gian lận trong kiểm tra đánh giá học sinh.', 'Liên hệ với phụ huynh học sinh qua mạng xã hội để trao đổi về kết quả học tập.'],
+    correctAnswer: 2,
+    explanation: 'Điều 10 Luật Nhà giáo 2025 nghiêm cấm nhà giáo xúc phạm danh dự, nhân phẩm, bạo hành học sinh; gian lận trong kiểm tra, đánh giá, thi cử; thu tiền trái quy định và các hành vi phi đạo đức nghề nghiệp khác.'
+  },
+  {
+    id: 'q-26', docId: 'luat-nha-giao', difficulty: 'medium',
+    question: 'Theo Luật Nhà giáo 2025, lương của nhà giáo được xếp như thế nào trong hệ thống thang bảng lương?',
+    options: ['Ngang bằng với mức lương trung bình của cán bộ công chức nhà nước.', 'Cao nhất trong hệ thống thang bảng lương hành chính sự nghiệp, cộng với phụ cấp ưu đãi nghề đặc thù.', 'Thấp hơn lương công chức nhưng được bù đắp toàn bộ bằng phụ cấp thâm niên.', 'Do mỗi địa phương tự quyết định dựa trên nguồn thu ngân sách.'],
+    correctAnswer: 1,
+    explanation: 'Điều 27 Luật Nhà giáo 2025 quy định: Lương của nhà giáo được xếp cao nhất trong hệ thống thang bảng lương hành chính sự nghiệp của Đảng và Nhà nước, đồng thời được hưởng phụ cấp ưu đãi nghề và các chính sách đặc thù khác.'
+  },
+  {
+    id: 'q-27', docId: 'luat-nha-giao', difficulty: 'easy',
+    question: 'Theo Luật Nhà giáo 2025, nhà giáo có quyền gì liên quan đến hoạt động chuyên môn?',
+    options: ['Quyền tự ý thay đổi chương trình giáo dục quốc gia không cần phê duyệt.', 'Quyền tự chủ chuyên môn và lựa chọn phương pháp giảng dạy phù hợp với học sinh.', 'Quyền từ chối thực hiện nhiệm vụ được phân công nếu không phù hợp chuyên ngành đào tạo.', 'Quyền tự cấp chứng chỉ học tập cho học sinh theo tiêu chí riêng của giáo viên.'],
+    correctAnswer: 1,
+    explanation: 'Điều 9 Luật Nhà giáo 2025 ghi nhận quyền tự chủ chuyên môn của nhà giáo: được lựa chọn phương pháp, hình thức tổ chức dạy học, giáo dục phù hợp với đối tượng học sinh trong khuôn khổ chương trình giáo dục quốc gia.'
+  },
+  {
+    id: 'q-28', docId: 'luat-nha-giao', difficulty: 'hard',
+    question: 'Nhà giáo vi phạm có thể bị đình chỉ giảng dạy tối đa bao lâu theo Luật Nhà giáo 2025?',
+    options: ['Tối đa 3 tháng trong thời gian chờ xử lý kỷ luật.', 'Tối đa 6 tháng và được xem xét gia hạn thêm 6 tháng.', 'Tối đa 12 tháng trong thời gian xem xét, xử lý kỷ luật.', 'Không giới hạn thời gian đình chỉ nếu vi phạm đặc biệt nghiêm trọng.'],
+    correctAnswer: 2,
+    explanation: 'Theo Điều 43 Luật Nhà giáo 2025, nhà giáo có thể bị đình chỉ giảng dạy tối đa 12 tháng trong thời gian cơ quan có thẩm quyền xem xét, xử lý kỷ luật. Trong thời gian đình chỉ, nhà giáo vẫn được hưởng 50% lương.'
+  },
+  {
+    id: 'q-29', docId: 'luat-nha-giao', difficulty: 'medium',
+    question: 'Luật Nhà giáo 2025 quy định nghĩa vụ bắt buộc nào mà nhà giáo phải thực hiện liên quan đến phát triển bản thân?',
+    options: ['Phải có bằng Thạc sĩ trở lên trong vòng 5 năm đầu công tác.', 'Học tập suốt đời, thực hiện đúng chương trình và chuẩn nghề nghiệp nhà giáo.', 'Tham dự tối thiểu 200 tiết bồi dưỡng chuyên môn mỗi năm học.', 'Xuất bản ít nhất 1 bài báo khoa học mỗi năm trong các tạp chí giáo dục.'],
+    correctAnswer: 1,
+    explanation: 'Điều 8 Luật Nhà giáo 2025 quy định nghĩa vụ của nhà giáo bao gồm: học tập, bồi dưỡng nâng cao trình độ chuyên môn, nghiệp vụ suốt đời; thực hiện đúng chương trình giáo dục và chuẩn nghề nghiệp; không ngừng nâng cao năng lực sư phạm.'
+  },
+  {
+    id: 'q-30', docId: 'luat-nha-giao', difficulty: 'hard',
+    question: 'Từ thời điểm nào nhà giáo không phải thực hiện chế độ tập sự khi mới vào nghề theo Luật Nhà giáo 2025?',
+    options: ['Từ ngày 01/01/2026.', 'Từ ngày 01/4/2026.', 'Từ ngày 01/7/2026.', 'Từ ngày 01/9/2026 (đầu năm học mới).'],
+    correctAnswer: 2,
+    explanation: 'Theo khoản 3 Điều 78 Luật Nhà giáo 2025 và Nghị định 93/2026, từ ngày 01/7/2026 bãi bỏ hoàn toàn chế độ tập sự đối với nhà giáo. Nhà giáo mới tuyển dụng được hưởng 100% lương và thực hiện nhiệm vụ đầy đủ ngay từ khi ký hợp đồng.'
+  },
+
+  // ===== LUẬT VIÊN CHỨC 129/2025 — câu 31–40 =====
+  {
+    id: 'q-31', docId: 'luat-vien-chuc', difficulty: 'easy',
+    question: 'Điểm khác biệt căn bản nhất phân biệt viên chức với công chức theo Luật Viên chức 2025 là gì?',
+    options: ['Viên chức không được nghỉ phép năm, công chức được nghỉ phép năm.', 'Viên chức làm việc theo hợp đồng làm việc tại đơn vị sự nghiệp công lập, công chức làm việc theo quyết định tại cơ quan hành chính nhà nước.', 'Viên chức không phải đóng BHXH bắt buộc, còn công chức phải đóng đầy đủ.', 'Viên chức chỉ được tuyển dụng theo hình thức xét tuyển, không được thi tuyển.'],
+    correctAnswer: 1,
+    explanation: 'Điều 2 Luật Viên chức 2025: Viên chức là công dân Việt Nam được tuyển dụng theo vị trí việc làm, làm việc tại đơn vị sự nghiệp công lập theo chế độ hợp đồng làm việc. Khác với công chức làm việc theo quyết định hành chính tại cơ quan nhà nước.'
+  },
+  {
+    id: 'q-32', docId: 'luat-vien-chuc', difficulty: 'medium',
+    question: 'Theo Luật Viên chức 2025 (sửa đổi), mỗi viên chức được ký hợp đồng làm việc tại bao nhiêu đơn vị sự nghiệp công lập cùng lúc?',
+    options: ['Tối đa 2 đơn vị nếu được cả hai cơ quan chủ quản đồng ý.', 'Chỉ được ký hợp đồng làm việc chính thức tại 1 đơn vị sự nghiệp công lập.', 'Không giới hạn số lượng đơn vị nếu thời gian công tác không chồng chéo.', 'Tối đa 3 đơn vị trong cùng một hệ thống ngành dọc (ví dụ: giáo dục).'],
+    correctAnswer: 1,
+    explanation: 'Điều 13 Luật Viên chức 2025 quy định viên chức chỉ được ký hợp đồng làm việc tại 1 đơn vị sự nghiệp công lập. Đây là điểm mới quan trọng năm 2025/2026 nhằm chống kiêm nhiệm không minh bạch và đảm bảo chất lượng công việc.'
+  },
+  {
+    id: 'q-33', docId: 'luat-vien-chuc', difficulty: 'easy',
+    question: 'Theo Luật Viên chức 2025, có bao nhiêu mức đánh giá xếp loại chất lượng viên chức hàng năm?',
+    options: ['2 mức: Hoàn thành và Không hoàn thành.', '3 mức: Tốt, Đạt và Không hoàn thành.', '4 mức: Xuất sắc, Tốt, Đạt, Không hoàn thành nhiệm vụ.', '5 mức: Xuất sắc, Tốt, Khá, Đạt, Không hoàn thành.'],
+    correctAnswer: 2,
+    explanation: 'Điều 25 Luật Viên chức 2025 quy định 4 mức xếp loại chất lượng viên chức: (1) Hoàn thành xuất sắc nhiệm vụ; (2) Hoàn thành tốt nhiệm vụ; (3) Hoàn thành nhiệm vụ; (4) Không hoàn thành nhiệm vụ.'
+  },
+  {
+    id: 'q-34', docId: 'luat-vien-chuc', difficulty: 'medium',
+    question: 'Hình thức kỷ luật nặng nhất có thể áp dụng đối với viên chức theo Luật Viên chức 2025 là gì?',
+    options: ['Hạ bậc lương và đình chỉ công tác 12 tháng.', 'Cách chức tất cả các chức vụ đang đảm nhiệm.', 'Buộc thôi việc.', 'Chuyển vùng công tác đến vùng đặc biệt khó khăn.'],
+    correctAnswer: 2,
+    explanation: 'Điều 30 Luật Viên chức 2025 quy định các hình thức kỷ luật: (1) Khiển trách; (2) Cảnh cáo; (3) Cách chức (áp dụng với viên chức giữ chức vụ quản lý); (4) Buộc thôi việc. Buộc thôi việc là hình thức kỷ luật nặng nhất.'
+  },
+  {
+    id: 'q-35', docId: 'luat-vien-chuc', difficulty: 'hard',
+    question: 'Thời hiệu xử lý kỷ luật viên chức có hành vi tham nhũng theo Luật Viên chức 2025 là bao lâu?',
+    options: ['5 năm kể từ thời điểm xảy ra vi phạm.', '7 năm kể từ khi phát hiện vi phạm.', '10 năm kể từ thời điểm xảy ra vi phạm.', 'Không có thời hiệu — có thể xử lý bất cứ lúc nào.'],
+    correctAnswer: 2,
+    explanation: 'Khoản 3 Điều 33 Luật Viên chức 2025: Thời hiệu xử lý kỷ luật là 10 năm đối với hành vi vi phạm pháp luật về tham nhũng, thực hành tiết kiệm chống lãng phí và các hành vi gây hậu quả đặc biệt nghiêm trọng. Vi phạm thông thường là 5 năm (2 năm nếu ít nghiêm trọng).'
+  },
+  {
+    id: 'q-36', docId: 'luat-vien-chuc', difficulty: 'medium',
+    question: 'Thời hiệu xử lý kỷ luật đối với vi phạm thông thường của viên chức theo Luật Viên chức 2025 là bao nhiêu?',
+    options: ['1 năm với vi phạm ít nghiêm trọng, 3 năm với vi phạm nghiêm trọng.', '2 năm với vi phạm ít nghiêm trọng, 5 năm với vi phạm nghiêm trọng hơn.', '3 năm đồng nhất cho mọi mức độ vi phạm thông thường.', '5 năm đồng nhất không phân biệt mức độ vi phạm.'],
+    correctAnswer: 1,
+    explanation: 'Điều 33 Luật Viên chức 2025: Thời hiệu xử lý kỷ luật là 2 năm đối với vi phạm ít nghiêm trọng; 5 năm đối với vi phạm nghiêm trọng hơn nhưng chưa đến mức tham nhũng hoặc gây hậu quả đặc biệt nghiêm trọng.'
+  },
+  {
+    id: 'q-37', docId: 'luat-vien-chuc', difficulty: 'medium',
+    question: 'Theo Điều 13 Luật Viên chức 2025, viên chức có được góp vốn vào cơ sở giáo dục ngoài công lập (trường tư) không?',
+    options: ['Không được phép vì tạo xung đột lợi ích với vai trò nhà giáo công lập.', 'Được phép góp vốn nhưng không được tham gia điều hành, quản lý.', 'Chỉ được góp vốn nếu nhận được sự chấp thuận của Bộ Giáo dục và Đào tạo.', 'Hoàn toàn không có quy định cụ thể, do đó tùy từng trường hợp.'],
+    correctAnswer: 1,
+    explanation: 'Điều 13 Luật Viên chức 2025 cho phép viên chức góp vốn vào cơ sở giáo dục ngoài công lập (trường tư) nhưng không được tham gia điều hành, quản lý hoạt động của cơ sở đó để tránh xung đột lợi ích với vị trí công lập.'
+  },
+  {
+    id: 'q-38', docId: 'luat-vien-chuc', difficulty: 'easy',
+    question: 'Theo Luật Viên chức 2025, bốn mức đánh giá xếp loại viên chức theo thứ tự từ cao đến thấp là gì?',
+    options: ['Giỏi / Khá / Trung bình / Yếu.', 'Xuất sắc / Tốt / Hoàn thành / Không hoàn thành nhiệm vụ.', 'Tốt / Khá / Đạt / Không đạt.', 'Hoàn thành xuất sắc / Hoàn thành tốt / Hoàn thành / Không hoàn thành nhiệm vụ.'],
+    correctAnswer: 3,
+    explanation: 'Điều 25 Luật Viên chức 2025 quy định 4 mức xếp loại theo thứ tự: (1) Hoàn thành xuất sắc nhiệm vụ; (2) Hoàn thành tốt nhiệm vụ; (3) Hoàn thành nhiệm vụ; (4) Không hoàn thành nhiệm vụ. Đây là cơ sở để bình xét thi đua, khen thưởng và xem xét ký tiếp hợp đồng.'
+  },
+  {
+    id: 'q-39', docId: 'luat-vien-chuc', difficulty: 'hard',
+    question: 'Điều kiện nào là bắt buộc để viên chức được xét thăng hạng chức danh nghề nghiệp theo Luật Viên chức 2025?',
+    options: ['Chỉ cần được Hiệu trưởng đề xuất và Phòng Giáo dục đồng ý.', 'Phải thi hoặc xét thăng hạng và có bằng cấp chuyên môn phù hợp với hạng được thăng.', 'Phải có thâm niên giảng dạy tối thiểu 10 năm và danh hiệu Giáo viên dạy giỏi cấp tỉnh.', 'Tự động thăng hạng sau mỗi 5 năm nếu không bị kỷ luật.'],
+    correctAnswer: 1,
+    explanation: 'Điều 32 Luật Viên chức 2025: Thăng hạng chức danh nghề nghiệp thực hiện thông qua thi hoặc xét theo quy định, viên chức phải đáp ứng tiêu chuẩn của hạng được thăng (bằng cấp chuyên môn, chứng chỉ bồi dưỡng, xếp loại đánh giá và thời gian giữ hạng hiện tại).'
+  },
+  {
+    id: 'q-40', docId: 'luat-vien-chuc', difficulty: 'easy',
+    question: 'Theo Luật Viên chức 2025, viên chức có được thực hiện quyền bầu cử, ứng cử không?',
+    options: ['Không được ứng cử vào cơ quan dân cử vì đang là viên chức nhà nước.', 'Chỉ được bầu cử, không được ứng cử vào các cơ quan dân cử.', 'Được thực hiện đầy đủ quyền bầu cử và ứng cử theo quy định của pháp luật.', 'Phải xin phép Hiệu trưởng trước khi thực hiện quyền bầu cử.'],
+    correctAnswer: 2,
+    explanation: 'Điều 9 Luật Viên chức 2025 quy định viên chức có quyền của công dân theo Hiến pháp và pháp luật, bao gồm quyền bầu cử và ứng cử vào Quốc hội, Hội đồng nhân dân các cấp và các cơ quan khác theo quy định.'
+  },
+
+  // ===== NĐ 93/2026 — câu 41–50 =====
+  {
+    id: 'q-41', docId: 'nd-93', difficulty: 'medium',
+    question: 'Điều kiện nào để giáo viên hợp đồng được cộng 5 điểm ưu tiên vào kết quả thi Vòng 2 kỳ tuyển dụng theo Nghị định 93/2026?',
+    options: ['Có thâm niên giảng dạy từ đủ 12 tháng trở lên và được Hiệu trưởng xác nhận.', 'Có thâm niên giảng dạy từ đủ 24 tháng và tốt nghiệp đại học loại khá trở lên.', 'Có thâm niên giảng dạy từ đủ 36 tháng (3 năm) trở lên và có đóng BHXH bắt buộc.', 'Có thâm niên giảng dạy từ đủ 60 tháng (5 năm) tại vùng đặc biệt khó khăn.'],
+    correctAnswer: 2,
+    explanation: 'Điều 6 Nghị định 93/2026/NĐ-CP: Người có thời gian thực tế giảng dạy từ đủ 36 tháng (3 năm) trở lên tại cơ sở giáo dục công lập hoặc dân lập/tư thục, có đóng BHXH bắt buộc phù hợp với vị trí dự tuyển, được cộng 05 điểm vào kết quả thi Vòng 2.'
+  },
+  {
+    id: 'q-42', docId: 'nd-93', difficulty: 'hard',
+    question: 'Theo Nghị định 93/2026/NĐ-CP, từ ngày nào bãi bỏ chế độ tập sự đối với nhà giáo mới được tuyển dụng?',
+    options: ['Từ ngày 31/3/2026 — ngày Nghị định 93 có hiệu lực.', 'Từ ngày 01/4/2026.', 'Từ ngày 01/7/2026.', 'Từ ngày 01/9/2026 — đầu năm học mới 2026-2027.'],
+    correctAnswer: 2,
+    explanation: 'Điều 37 Nghị định 93/2026/NĐ-CP quy định chế độ tập sự đối với nhà giáo bị bãi bỏ từ ngày 01/7/2026. Từ thời điểm này, nhà giáo mới tuyển dụng được nhận việc và hưởng đầy đủ lương ngay khi hợp đồng có hiệu lực, không phải qua giai đoạn tập sự.'
+  },
+  {
+    id: 'q-43', docId: 'nd-93', difficulty: 'medium',
+    question: 'Theo Nghị định 93/2026/NĐ-CP, nhà giáo mới được tuyển dụng nhận việc sẽ được hưởng bao nhiêu phần trăm lương?',
+    options: ['75% lương chính thức trong 6 tháng đầu thử việc.', '85% lương chính thức trong 12 tháng tập sự.', '100% lương chính thức ngay khi hợp đồng có hiệu lực, không có chế độ tập sự.', '90% lương trong năm đầu, đủ 100% từ năm thứ hai trở đi.'],
+    correctAnswer: 2,
+    explanation: 'Điều 21 Nghị định 93/2026 quy định: Từ ngày 01/7/2026, nhà giáo trúng tuyển được ký hợp đồng làm việc và hưởng 100% lương ngay từ ngày đầu nhận việc. Chế độ tập sự (85% lương) bị bãi bỏ hoàn toàn.'
+  },
+  {
+    id: 'q-44', docId: 'nd-93', difficulty: 'easy',
+    question: 'Nghị định 93/2026/NĐ-CP hướng dẫn chi tiết thi hành những nội dung liên quan đến luật nào?',
+    options: ['Luật Viên chức số 129/2025/QH15 về tuyển dụng viên chức.', 'Luật Nhà giáo số 73/2025/QH15 về tuyển dụng, quản lý và chính sách nhà giáo.', 'Luật Giáo dục 2019 về tiêu chuẩn trình độ đào tạo giáo viên.', 'Luật Lao động 2019 về hợp đồng làm việc và chế độ BHXH giáo viên.'],
+    correctAnswer: 1,
+    explanation: 'Nghị định 93/2026/NĐ-CP được ban hành để hướng dẫn chi tiết thi hành một số điều của Luật Nhà giáo số 73/2025/QH15, quy định cụ thể về tuyển dụng, ký hợp đồng, bổ nhiệm, chứng chỉ hành nghề và các chính sách đặc thù cho nhà giáo.'
+  },
+  {
+    id: 'q-45', docId: 'nd-93', difficulty: 'hard',
+    question: 'Chứng chỉ hành nghề nhà giáo theo Nghị định 93/2026 có quy định cụ thể về thời hạn như thế nào?',
+    options: ['Có giá trị vĩnh viễn, không cần gia hạn trong suốt quá trình hành nghề.', 'Có giá trị 5 năm, phải gia hạn định kỳ sau mỗi 5 năm.', 'Có thời hạn theo quy định của Bộ Giáo dục và Đào tạo, có thể gia hạn khi đáp ứng điều kiện.', 'Hết hạn khi nhà giáo chuyển công tác sang địa phương khác.'],
+    correctAnswer: 2,
+    explanation: 'Điều 18 Nghị định 93/2026: Thời hạn của chứng chỉ hành nghề nhà giáo do Bộ Giáo dục và Đào tạo quy định cụ thể. Nhà giáo có thể được gia hạn chứng chỉ khi đáp ứng điều kiện bồi dưỡng, cập nhật kiến thức và không vi phạm đạo đức nghề nghiệp.'
+  },
+  {
+    id: 'q-46', docId: 'nd-93', difficulty: 'medium',
+    question: 'Theo Nghị định 93/2026/NĐ-CP, thời hạn để nhà giáo trúng tuyển ký hợp đồng làm việc sau khi có quyết định tuyển dụng là bao nhiêu?',
+    options: ['Trong vòng 3 ngày làm việc kể từ ngày có quyết định tuyển dụng.', 'Trong vòng 5 ngày làm việc kể từ ngày có quyết định tuyển dụng.', 'Trong vòng 15 ngày kể từ ngày có quyết định tuyển dụng.', 'Trong vòng 30 ngày kể từ ngày nhận được thông báo trúng tuyển.'],
+    correctAnswer: 1,
+    explanation: 'Điều 20 Nghị định 93/2026 quy định: Sau khi có quyết định tuyển dụng, người trúng tuyển và đơn vị phải hoàn thành ký kết hợp đồng làm việc trong vòng 5 ngày làm việc. Nếu quá thời hạn mà không có lý do chính đáng, quyết định tuyển dụng có thể bị hủy.'
+  },
+  {
+    id: 'q-47', docId: 'nd-93', difficulty: 'medium',
+    question: 'Nhà giáo muốn được bổ nhiệm vào chức vụ quản lý trường tiểu học (Hiệu trưởng/Phó Hiệu trưởng) cần có điều kiện gì liên quan đến thời gian giảng dạy?',
+    options: ['Phải có ít nhất 3 năm giảng dạy và danh hiệu Giáo viên dạy giỏi cấp huyện.', 'Phải có thời gian giảng dạy theo quy định, đạt chuẩn nghề nghiệp và hoàn thành bồi dưỡng quản lý.', 'Chỉ cần có bằng Thạc sĩ Quản lý Giáo dục mà không cần kinh nghiệm dạy học.', 'Phải có ít nhất 15 năm kinh nghiệm giảng dạy tại cùng một trường.'],
+    correctAnswer: 1,
+    explanation: 'Điều 25 Nghị định 93/2026 quy định: Điều kiện bổ nhiệm vào chức vụ quản lý trường tiểu học gồm thời gian giảng dạy theo quy định (thường 5 năm trở lên), đạt chuẩn nghề nghiệp mức Tốt trở lên và hoàn thành chương trình bồi dưỡng quản lý trường học.'
+  },
+  {
+    id: 'q-48', docId: 'nd-93', difficulty: 'easy',
+    question: 'Nhà giáo công tác tại vùng đặc biệt khó khăn được hưởng hỗ trợ gì theo quy định đặc thù tại Nghị định 93/2026?',
+    options: ['Được miễn toàn bộ học phí cho con em khi học tại cơ sở giáo dục công lập.', 'Được cấp nhà công vụ, hưởng phụ cấp vùng và các chính sách thu hút đặc thù.', 'Được tuyển thẳng vào hạng chức danh cao hơn mà không cần qua thi thăng hạng.', 'Được làm việc từ xa (remote) tại thành phố trong 3 tháng mỗi năm.'],
+    correctAnswer: 1,
+    explanation: 'Điều 30 Nghị định 93/2026 quy định chính sách đặc thù cho nhà giáo vùng khó khăn: được bố trí nhà công vụ hoặc hỗ trợ thuê nhà; hưởng phụ cấp vùng, phụ cấp thu hút và các hỗ trợ di chuyển, ổn định cuộc sống theo quy định của Chính phủ.'
+  },
+  {
+    id: 'q-49', docId: 'nd-93', difficulty: 'easy',
+    question: 'Cơ quan nào có thẩm quyền cấp chứng chỉ hành nghề nhà giáo theo Nghị định 93/2026?',
+    options: ['Sở Giáo dục và Đào tạo tỉnh/thành phố nơi nhà giáo đăng ký hành nghề.', 'Phòng Giáo dục và Đào tạo huyện/quận nơi trường học đóng trụ sở.', 'Bộ Giáo dục và Đào tạo.', 'Ủy ban nhân dân tỉnh/thành phố trực thuộc trung ương.'],
+    correctAnswer: 2,
+    explanation: 'Điều 16 Nghị định 93/2026 quy định rõ: Bộ Giáo dục và Đào tạo là cơ quan duy nhất có thẩm quyền cấp chứng chỉ hành nghề nhà giáo trên phạm vi cả nước, đảm bảo tính thống nhất và tiêu chuẩn quốc gia trong quản lý chất lượng nhà giáo.'
+  },
+  {
+    id: 'q-50', docId: 'nd-93', difficulty: 'hard',
+    question: 'Nghị định 93/2026/NĐ-CP có hiệu lực thi hành từ ngày nào?',
+    options: ['Từ ngày 01/01/2026.', 'Từ ngày 28/02/2026.', 'Từ ngày 31/3/2026.', 'Từ ngày 01/7/2026 cùng lúc với bãi bỏ chế độ tập sự.'],
+    correctAnswer: 2,
+    explanation: 'Điều 40 Nghị định 93/2026/NĐ-CP quy định Nghị định này có hiệu lực thi hành từ ngày 31/3/2026. Tuy nhiên, một số điều khoản cụ thể (như bãi bỏ chế độ tập sự) có lộ trình riêng, có hiệu lực từ ngày 01/7/2026.'
+  },
+
+  // ===== NĐ 259/2026 — câu 51–60 =====
+  {
+    id: 'q-51', docId: 'nd-259', difficulty: 'medium',
+    question: 'Vòng 1 thi tuyển viên chức theo Nghị định 259/2026 gồm bao nhiêu câu trắc nghiệm và thời gian làm bài là bao lâu?',
+    options: ['40 câu / 40 phút.', '60 câu / 60 phút.', '80 câu / 90 phút.', '100 câu / 120 phút.'],
+    correctAnswer: 1,
+    explanation: 'Điều 10 Nghị định 259/2026/NĐ-CP quy định Vòng 1 (thi trắc nghiệm kiến thức chung) gồm 60 câu hỏi trắc nghiệm, thời gian làm bài 60 phút. Phần Ngoại ngữ thi riêng 30 câu trong 30 phút.'
+  },
+  {
+    id: 'q-52', docId: 'nd-259', difficulty: 'medium',
+    question: 'Điểm tối thiểu để thí sinh đạt yêu cầu Vòng 1 thi tuyển viên chức theo Nghị định 259/2026 là bao nhiêu câu trả lời đúng?',
+    options: ['Trả lời đúng ít nhất 20 câu (33,3%) trên tổng số 60 câu.', 'Trả lời đúng ít nhất 30 câu (50%) ở từng phần thi.', 'Trả lời đúng ít nhất 40 câu (66,7%) trên tổng số 60 câu.', 'Trả lời đúng ít nhất 45 câu (75%) trên tổng số 60 câu.'],
+    correctAnswer: 1,
+    explanation: 'Điều 11 Nghị định 259/2026: Thí sinh đạt Vòng 1 khi trả lời đúng từ 50% số câu hỏi trở lên ở từng phần thi (kiến thức chung và ngoại ngữ). Tức là phải đúng ít nhất 30/60 câu kiến thức chung và 15/30 câu ngoại ngữ.'
+  },
+  {
+    id: 'q-53', docId: 'nd-259', difficulty: 'medium',
+    question: 'Điểm tối thiểu đạt yêu cầu Vòng 2 thi tuyển viên chức theo Nghị định 259/2026 là bao nhiêu?',
+    options: ['Đạt tối thiểu 40/100 điểm bài thi Vòng 2.', 'Đạt tối thiểu 50/100 điểm bài thi Vòng 2.', 'Đạt tối thiểu 60/100 điểm bài thi Vòng 2.', 'Đạt tối thiểu 70/100 điểm bài thi Vòng 2.'],
+    correctAnswer: 1,
+    explanation: 'Điều 14 Nghị định 259/2026 quy định: Thí sinh đạt yêu cầu Vòng 2 khi đạt từ 50 điểm trở lên trên tổng số 100 điểm của bài thi Vòng 2 (thi viết, phỏng vấn hoặc thực hành).'
+  },
+  {
+    id: 'q-54', docId: 'nd-259', difficulty: 'hard',
+    question: 'Nghị định 259/2026/NĐ-CP thay thế bao nhiêu nghị định cũ về tuyển dụng và đào tạo, bồi dưỡng viên chức?',
+    options: ['2 nghị định cũ.', '3 nghị định cũ.', '4 nghị định cũ.', '5 nghị định cũ.'],
+    correctAnswer: 2,
+    explanation: 'Điều 58 Nghị định 259/2026 quy định bãi bỏ và thay thế 4 nghị định: NĐ 115/2020/NĐ-CP về tuyển dụng viên chức; NĐ 85/2023/NĐ-CP sửa đổi NĐ 115; NĐ 101/2017/NĐ-CP về đào tạo bồi dưỡng cán bộ công chức viên chức; NĐ 89/2021/NĐ-CP sửa đổi NĐ 101.'
+  },
+  {
+    id: 'q-55', docId: 'nd-259', difficulty: 'hard',
+    question: 'Bốn nghị định bị thay thế bởi Nghị định 259/2026 là những nghị định nào?',
+    options: ['NĐ 29/2012, NĐ 161/2018, NĐ 45/2020, NĐ 138/2020.', 'NĐ 115/2020, NĐ 85/2023, NĐ 101/2017, NĐ 89/2021.', 'NĐ 06/2010, NĐ 29/2012, NĐ 115/2020, NĐ 101/2017.', 'NĐ 24/2010, NĐ 36/2013, NĐ 55/2015, NĐ 90/2020.'],
+    correctAnswer: 1,
+    explanation: 'Nghị định 259/2026 bãi bỏ và thay thế: (1) NĐ 115/2020/NĐ-CP về tuyển dụng, sử dụng, quản lý viên chức; (2) NĐ 85/2023/NĐ-CP sửa đổi NĐ 115; (3) NĐ 101/2017/NĐ-CP về đào tạo, bồi dưỡng cán bộ, công chức, viên chức; (4) NĐ 89/2021/NĐ-CP sửa đổi NĐ 101.'
+  },
+  {
+    id: 'q-56', docId: 'nd-259', difficulty: 'hard',
+    question: 'Nghị định 259/2026/NĐ-CP có hiệu lực thi hành từ ngày nào?',
+    options: ['Từ ngày 01/01/2026.', 'Từ ngày 31/3/2026.', 'Từ ngày 01/6/2026.', 'Từ ngày 01/7/2026.'],
+    correctAnswer: 3,
+    explanation: 'Điều 60 Nghị định 259/2026/NĐ-CP quy định Nghị định này có hiệu lực thi hành từ ngày 01/7/2026, thay thế đồng loạt 4 nghị định cũ về tuyển dụng và đào tạo, bồi dưỡng viên chức. Đây cũng là thời điểm bãi bỏ chế độ tập sự nhà giáo.'
+  },
+  {
+    id: 'q-57', docId: 'nd-259', difficulty: 'medium',
+    question: 'Bài thi Vòng 2 thi tuyển viên chức theo Nghị định 259/2026 kéo dài bao lâu?',
+    options: ['60 phút (1 tiếng).', '120 phút (2 tiếng).', '180 phút (3 tiếng).', '240 phút (4 tiếng).'],
+    correctAnswer: 2,
+    explanation: 'Điều 13 Nghị định 259/2026 quy định: Bài thi Vòng 2 (thi viết) có thời gian làm bài là 180 phút (3 tiếng). Đối với hình thức phỏng vấn, thời gian chuẩn bị tối đa 30 phút và phỏng vấn tối đa 30 phút.'
+  },
+  {
+    id: 'q-58', docId: 'nd-259', difficulty: 'medium',
+    question: 'Theo Nghị định 259/2026, sau khi có quyết định trúng tuyển, viên chức phải ký hợp đồng làm việc trong vòng bao lâu?',
+    options: ['Trong vòng 3 ngày làm việc.', 'Trong vòng 5 ngày làm việc.', 'Trong vòng 10 ngày làm việc.', 'Trong vòng 15 ngày kể từ ngày nhận thông báo.'],
+    correctAnswer: 1,
+    explanation: 'Điều 21 Nghị định 259/2026: Trong thời hạn 5 ngày làm việc kể từ ngày quyết định tuyển dụng có hiệu lực, người đứng đầu đơn vị sự nghiệp công lập và người trúng tuyển phải hoàn thành ký kết hợp đồng làm việc.'
+  },
+  {
+    id: 'q-59', docId: 'nd-259', difficulty: 'medium',
+    question: 'Vòng 2 thi tuyển viên chức theo Nghị định 259/2026 gồm những hình thức thi nào?',
+    options: ['Chỉ có hình thức thi viết luận văn chuyên môn.', 'Thi viết hoặc phỏng vấn hoặc thực hành, tùy theo đặc thù vị trí việc làm.', 'Phải thi đủ cả 3 hình thức: viết, phỏng vấn và thực hành.', 'Thi trắc nghiệm chuyên sâu kết hợp thuyết trình giáo án.'],
+    correctAnswer: 1,
+    explanation: 'Điều 12 Nghị định 259/2026 quy định hình thức thi Vòng 2: Thi viết (180 phút) hoặc Phỏng vấn hoặc Thực hành, do cơ quan tuyển dụng lựa chọn phù hợp với đặc thù vị trí việc làm. Giáo viên thường thi viết chuyên môn + thực hành dạy học.'
+  },
+  {
+    id: 'q-60', docId: 'nd-259', difficulty: 'hard',
+    question: 'Phần thi Ngoại ngữ trong Vòng 1 tuyển dụng viên chức theo Nghị định 259/2026 gồm bao nhiêu câu và thời gian làm bài là bao lâu?',
+    options: ['20 câu / 20 phút.', '25 câu / 25 phút.', '30 câu / 30 phút.', '40 câu / 40 phút.'],
+    correctAnswer: 2,
+    explanation: 'Điều 10 Nghị định 259/2026: Phần thi Ngoại ngữ trong Vòng 1 gồm 30 câu trắc nghiệm trong thời gian 30 phút. Thí sinh phải trả lời đúng từ 50% (15 câu) trở lên để đạt yêu cầu phần thi này. Có thể miễn phần ngoại ngữ nếu có chứng chỉ đạt chuẩn.'
+  },
+
+  // ===== TT 03/2026 ỨNG XỬ — câu 61–70 =====
+  {
+    id: 'q-61', docId: 'tt03', difficulty: 'easy',
+    question: 'Thông tư số 03/2026/TT-BGDĐT quy định về vấn đề gì liên quan đến nhà giáo?',
+    options: ['Chuẩn trình độ đào tạo và chương trình bồi dưỡng nhà giáo.', 'Quy tắc ứng xử của nhà giáo trong cơ sở giáo dục mầm non, phổ thông và giáo dục thường xuyên.', 'Chế độ làm việc và định mức tiết dạy của giáo viên tiểu học.', 'Tổ chức và hoạt động của tổ chuyên môn trong nhà trường.'],
+    correctAnswer: 1,
+    explanation: 'Thông tư 03/2026/TT-BGDĐT do Bộ GD&ĐT ban hành, quy định về quy tắc ứng xử của nhà giáo trong các cơ sở giáo dục mầm non, giáo dục phổ thông và giáo dục thường xuyên, nhằm xây dựng môi trường giáo dục lành mạnh, chuyên nghiệp.'
+  },
+  {
+    id: 'q-62', docId: 'tt03', difficulty: 'medium',
+    question: 'Khi nhận được quà tặng từ phụ huynh học sinh, nhà giáo phải xử lý như thế nào theo Thông tư 03/2026?',
+    options: ['Được nhận tất cả quà tặng vì đây là tình cảm tự nguyện của phụ huynh.', 'Phải từ chối hoặc trả lại quà tặng có giá trị lớn, báo cáo lãnh đạo nếu cần thiết.', 'Được nhận quà dưới 500.000 đồng, từ chối nếu quà trên 500.000 đồng.', 'Chỉ được nhận quà hiện vật, không được nhận tiền mặt.'],
+    correctAnswer: 1,
+    explanation: 'Điều 8 Thông tư 03/2026 quy định: Nhà giáo không được nhận tiền, tài sản hoặc lợi ích vật chất từ người học, gia đình người học. Khi nhận được quà tặng, nhà giáo phải từ chối hoặc trả lại; nếu không thể trả lại ngay, phải báo cáo lãnh đạo và nộp lại đơn vị xử lý theo quy định.'
+  },
+  {
+    id: 'q-63', docId: 'tt03', difficulty: 'medium',
+    question: 'Theo Thông tư 03/2026, nhà giáo được đăng tải loại thông tin nào lên mạng xã hội?',
+    options: ['Bất kỳ thông tin cá nhân nào vì đây là quyền tự do ngôn luận của công dân.', 'Chỉ được đăng thông tin đúng sự thật, không ảnh hưởng đến uy tín nhà trường và ngành giáo dục.', 'Được chia sẻ mọi thông tin liên quan đến học sinh để phụ huynh tiện theo dõi.', 'Được đăng thông tin về học sinh miễn là không kèm hình ảnh nhận dạng.'],
+    correctAnswer: 1,
+    explanation: 'Điều 10 Thông tư 03/2026 quy định: Nhà giáo chỉ được đăng tải, chia sẻ thông tin đúng sự thật trên mạng xã hội; không được đăng thông tin sai lệch, không chính xác hoặc có nội dung gây ảnh hưởng xấu đến uy tín của nhà trường, ngành giáo dục và Nhà nước.'
+  },
+  {
+    id: 'q-64', docId: 'tt03', difficulty: 'easy',
+    question: 'Hành vi nào sau đây bị cấm khi nhà giáo ứng xử với học sinh theo Thông tư 03/2026?',
+    options: ['Nhắc nhở học sinh khi nói chuyện riêng trong giờ học.', 'Yêu cầu học sinh ở lại sau giờ học để phụ đạo bài.', 'Xúc phạm nhân phẩm, trừng phạt thể xác và phân biệt đối xử học sinh.', 'Liên lạc với phụ huynh khi học sinh có kết quả học tập giảm sút.'],
+    correctAnswer: 2,
+    explanation: 'Điều 6 Thông tư 03/2026 nghiêm cấm nhà giáo: xúc phạm danh dự, nhân phẩm học sinh; trừng phạt thể xác dưới mọi hình thức; có thái độ phân biệt đối xử về giới tính, dân tộc, tôn giáo, hoàn cảnh gia đình. Đây là 3 trong 5 nhóm hành vi bị cấm.'
+  },
+  {
+    id: 'q-65', docId: 'tt03', difficulty: 'hard',
+    question: 'Thông tư 03/2026/TT-BGDĐT có hiệu lực thi hành từ ngày nào?',
+    options: ['Từ ngày 01/01/2026.', 'Từ ngày 30/01/2026.', 'Từ ngày 01/3/2026.', 'Từ ngày 01/9/2026.'],
+    correctAnswer: 1,
+    explanation: 'Thông tư 03/2026/TT-BGDĐT được Bộ Giáo dục và Đào tạo ban hành ngày 15/01/2026 và có hiệu lực từ ngày 30/01/2026. Đây là thời điểm bắt đầu áp dụng quy tắc ứng xử mới trong các cơ sở giáo dục phổ thông trên toàn quốc.'
+  },
+  {
+    id: 'q-66', docId: 'tt03', difficulty: 'hard',
+    question: 'Thông tư 03/2026 quy định bao nhiêu nhóm hành vi bị cấm đối với nhà giáo?',
+    options: ['3 nhóm hành vi cấm.', '4 nhóm hành vi cấm.', '5 nhóm hành vi cấm.', '7 nhóm hành vi cấm.'],
+    correctAnswer: 2,
+    explanation: 'Thông tư 03/2026 quy định 5 nhóm hành vi bị nghiêm cấm: (1) Vi phạm đạo đức nghề nghiệp; (2) Xúc phạm, trừng phạt, phân biệt đối xử học sinh; (3) Dạy thêm trái quy định; (4) Nhận quà, tiền từ phụ huynh, học sinh; (5) Đăng thông tin sai lệch, gây ảnh hưởng xấu trên mạng xã hội.'
+  },
+  {
+    id: 'q-67', docId: 'tt03', difficulty: 'medium',
+    question: 'Theo Thông tư 03/2026, nhà giáo ứng xử với đồng nghiệp phải đảm bảo nguyên tắc gì?',
+    options: ['Chỉ cần lịch sự trong giao tiếp hằng ngày, không cần hợp tác trong chuyên môn.', 'Đoàn kết, hợp tác, tôn trọng lẫn nhau và không cạnh tranh không lành mạnh.', 'Phải giữ bí mật về phương pháp giảng dạy riêng của bản thân.', 'Được phép từ chối tham gia sinh hoạt chuyên môn nếu bận công việc cá nhân.'],
+    correctAnswer: 1,
+    explanation: 'Điều 7 Thông tư 03/2026 quy định chuẩn mực ứng xử với đồng nghiệp: Nhà giáo phải đoàn kết, hợp tác, tôn trọng, chia sẻ kinh nghiệm; không ganh đua, cạnh tranh không lành mạnh; hỗ trợ đồng nghiệp mới và cùng nhau nâng cao chất lượng giáo dục.'
+  },
+  {
+    id: 'q-68', docId: 'tt03', difficulty: 'medium',
+    question: 'Khi học sinh có vấn đề khó khăn về tâm lý hoặc học tập, nhà giáo cần làm gì theo chuẩn mực ứng xử tại Thông tư 03/2026?',
+    options: ['Chuyển ngay học sinh sang lớp khác hoặc đề nghị nhà trường can thiệp.', 'Lắng nghe, tư vấn kịp thời và phối hợp với gia đình để hỗ trợ học sinh.', 'Báo cáo với cơ quan chức năng ngay khi phát hiện học sinh có dấu hiệu bất thường.', 'Không can thiệp vì đây là trách nhiệm của cha mẹ học sinh và nhà tâm lý.'],
+    correctAnswer: 1,
+    explanation: 'Điều 6 Thông tư 03/2026 quy định: Nhà giáo có trách nhiệm lắng nghe, quan tâm, tư vấn và hỗ trợ kịp thời khi học sinh gặp khó khăn; phối hợp chặt chẽ với gia đình để cùng giải quyết vấn đề, đảm bảo quyền lợi tốt nhất cho người học.'
+  },
+  {
+    id: 'q-69', docId: 'tt03', difficulty: 'hard',
+    question: 'Theo Thông tư 03/2026, khi không đồng ý với quyết định của lãnh đạo, nhà giáo nên xử lý như thế nào?',
+    options: ['Được công khai phản đối qua mạng xã hội để tạo sức ép buộc lãnh đạo thay đổi quyết định.', 'Phản ánh đúng kênh, góp ý xây dựng theo quy trình nội bộ hoặc qua các kênh hợp pháp.', 'Từ chối thực hiện quyết định cho đến khi lãnh đạo giải thích thỏa đáng.', 'Liên hệ trực tiếp với cơ quan quản lý cấp trên mà không cần thông báo cho lãnh đạo trực tiếp.'],
+    correctAnswer: 1,
+    explanation: 'Điều 9 Thông tư 03/2026 quy định: Khi không đồng ý với quyết định của lãnh đạo, nhà giáo phải phản ánh theo đúng kênh nội bộ (họp tổ chuyên môn, gặp lãnh đạo trực tiếp, kiến nghị bằng văn bản) hoặc qua các tổ chức đoàn thể, tuyệt đối không được gây áp lực bằng dư luận hay mạng xã hội.'
+  },
+  {
+    id: 'q-70', docId: 'tt03', difficulty: 'medium',
+    question: 'Theo Thông tư 03/2026, hoạt động dạy thêm trái quy định của nhà giáo được xác định là hành vi như thế nào?',
+    options: ['Được chấp nhận nếu học sinh tự nguyện và phụ huynh đồng ý.', 'Chỉ bị nhắc nhở lần đầu, bị phạt tiền nếu tái phạm lần thứ hai.', 'Bị nghiêm cấm và có thể bị xử lý kỷ luật tùy theo mức độ vi phạm.', 'Không có quy định cụ thể trong Thông tư 03/2026.'],
+    correctAnswer: 2,
+    explanation: 'Thông tư 03/2026 xác định dạy thêm trái quy định là 1 trong 5 nhóm hành vi bị nghiêm cấm đối với nhà giáo. Vi phạm sẽ bị xử lý theo quy định về kỷ luật viên chức: từ khiển trách, cảnh cáo đến buộc thôi việc tùy mức độ, và có thể bị xử phạt hành chính theo quy định của Chính phủ.'
+  },
+
+  // ===== TT 30/2026 CHUẨN NGHỀ NGHIỆP — câu 71–80 =====
+  {
+    id: 'q-71', docId: 'tt30', difficulty: 'easy',
+    question: 'Thông tư 30/2026/TT-BGDĐT quy định chuẩn nghề nghiệp giáo viên cơ sở giáo dục phổ thông gồm bao nhiêu tiêu chuẩn?',
+    options: ['3 tiêu chuẩn', '4 tiêu chuẩn', '5 tiêu chuẩn', '6 tiêu chuẩn'],
+    correctAnswer: 2,
+    explanation: 'Điều 4 Thông tư 30/2026/TT-BGDĐT quy định chuẩn nghề nghiệp giáo viên cơ sở giáo dục phổ thông gồm 5 tiêu chuẩn: (1) Phẩm chất nhà giáo; (2) Năng lực chuyên môn nghiệp vụ; (3) Năng lực xây dựng môi trường giáo dục; (4) Năng lực phát triển mối quan hệ; (5) Năng lực phát triển bản thân và tổ chức.'
+  },
+  {
+    id: 'q-72', docId: 'tt30', difficulty: 'medium',
+    question: 'Tổng số tiêu chí trong chuẩn nghề nghiệp giáo viên tiểu học theo Thông tư 30/2026 là bao nhiêu?',
+    options: ['10 tiêu chí', '12 tiêu chí', '15 tiêu chí', '20 tiêu chí'],
+    correctAnswer: 2,
+    explanation: 'Thông tư 30/2026/TT-BGDĐT quy định chuẩn nghề nghiệp giáo viên tiểu học gồm 5 tiêu chuẩn được cụ thể hóa thành 15 tiêu chí: Tiêu chuẩn 1 có 3 tiêu chí, Tiêu chuẩn 2 có 6 tiêu chí, Tiêu chuẩn 3 có 2 tiêu chí, Tiêu chuẩn 4 có 2 tiêu chí, Tiêu chuẩn 5 có 2 tiêu chí.'
+  },
+  {
+    id: 'q-73', docId: 'tt30', difficulty: 'easy',
+    question: 'Đánh giá chuẩn nghề nghiệp giáo viên theo Thông tư 30/2026 có mấy mức xếp loại?',
+    options: ['2 mức: Đạt và Chưa đạt.', '3 mức: Tốt, Khá và Đạt.', '4 mức: Tốt, Khá, Đạt và Chưa đạt.', '5 mức: Xuất sắc, Tốt, Khá, Đạt và Chưa đạt.'],
+    correctAnswer: 2,
+    explanation: 'Điều 7 Thông tư 30/2026 quy định 4 mức xếp loại kết quả đánh giá chuẩn nghề nghiệp giáo viên: (1) Tốt; (2) Khá; (3) Đạt; (4) Chưa đạt. Kết quả đánh giá là cơ sở để xem xét bổ nhiệm, thăng hạng, khen thưởng và các chính sách khác.'
+  },
+  {
+    id: 'q-74', docId: 'tt30', difficulty: 'medium',
+    question: 'Tiêu chuẩn 2 về Năng lực chuyên môn nghiệp vụ trong Thông tư 30/2026 có bao nhiêu tiêu chí?',
+    options: ['3 tiêu chí', '4 tiêu chí', '5 tiêu chí', '6 tiêu chí'],
+    correctAnswer: 3,
+    explanation: 'Tiêu chuẩn 2 về Năng lực chuyên môn nghiệp vụ trong Thông tư 30/2026 gồm 6 tiêu chí: (1) Xây dựng kế hoạch dạy học; (2) Thực hiện dạy học; (3) Kiểm tra đánh giá kết quả học tập; (4) Tư vấn, hỗ trợ học sinh; (5) Ứng dụng CNTT và phương tiện dạy học; (6) Sử dụng ngoại ngữ trong dạy học.'
+  },
+  {
+    id: 'q-75', docId: 'tt30', difficulty: 'medium',
+    question: 'Trong chuẩn nghề nghiệp giáo viên tiểu học theo Thông tư 30/2026, tiêu chuẩn nào quy định về ứng dụng công nghệ thông tin?',
+    options: ['Tiêu chuẩn 1 — Phẩm chất nhà giáo.', 'Tiêu chuẩn 2 — Năng lực chuyên môn nghiệp vụ.', 'Tiêu chuẩn 3 — Năng lực xây dựng môi trường giáo dục.', 'Tiêu chuẩn 5 — Năng lực phát triển bản thân.'],
+    correctAnswer: 1,
+    explanation: 'Tiêu chuẩn 2 (Năng lực chuyên môn nghiệp vụ) của Thông tư 30/2026 bao gồm tiêu chí 2.5 về "Ứng dụng công nghệ thông tin và sử dụng phương tiện dạy học hiệu quả". Đây là tiêu chí phản ánh yêu cầu về năng lực số trong thời đại 4.0.'
+  },
+  {
+    id: 'q-76', docId: 'tt30', difficulty: 'medium',
+    question: 'Theo Thông tư 30/2026, đánh giá chuẩn nghề nghiệp giáo viên được thực hiện vào thời điểm nào trong năm?',
+    options: ['Vào đầu năm học (tháng 9) khi lên kế hoạch công tác.', 'Vào giữa năm học (tháng 12-1) kết hợp với sơ kết học kỳ I.', 'Vào cuối năm học sau khi kết thúc năm học chính thức.', 'Bất kỳ thời điểm nào trong năm theo quyết định của Hiệu trưởng.'],
+    correctAnswer: 2,
+    explanation: 'Điều 8 Thông tư 30/2026 quy định: Đánh giá chuẩn nghề nghiệp giáo viên được thực hiện vào cuối năm học, gắn với đánh giá xếp loại chất lượng viên chức hàng năm. Kết quả đánh giá chuẩn nghề nghiệp là một trong các căn cứ để đánh giá xếp loại viên chức.'
+  },
+  {
+    id: 'q-77', docId: 'tt30', difficulty: 'easy',
+    question: 'Thông tư 30/2026/TT-BGDĐT thay thế thông tư nào về chuẩn nghề nghiệp giáo viên?',
+    options: ['Thông tư 14/2011/TT-BGDĐT.', 'Thông tư 20/2018/TT-BGDĐT.', 'Thông tư 06/2019/TT-BGDĐT.', 'Thông tư 25/2015/TT-BGDĐT.'],
+    correctAnswer: 1,
+    explanation: 'Điều 12 Thông tư 30/2026/TT-BGDĐT quy định: Thông tư này thay thế Thông tư số 20/2018/TT-BGDĐT ngày 22/8/2018 của Bộ trưởng Bộ Giáo dục và Đào tạo ban hành quy định chuẩn nghề nghiệp giáo viên cơ sở giáo dục phổ thông.'
+  },
+  {
+    id: 'q-78', docId: 'tt30', difficulty: 'hard',
+    question: 'Giáo viên bị xếp loại "Chưa đạt" chuẩn nghề nghiệp 2 năm liên tiếp theo Thông tư 30/2026 sẽ bị xử lý như thế nào?',
+    options: ['Chỉ bị hạ bậc lương và bổ sung kế hoạch bồi dưỡng cá nhân.', 'Tự động bị chấm dứt hợp đồng làm việc ngay sau kỳ đánh giá.', 'Xem xét chấm dứt hợp đồng làm việc theo quy định của pháp luật về viên chức.', 'Bắt buộc học lại chương trình đại học sư phạm và thi lại chứng chỉ hành nghề.'],
+    correctAnswer: 2,
+    explanation: 'Điều 9 Thông tư 30/2026 quy định: Giáo viên xếp loại "Chưa đạt" chuẩn nghề nghiệp 2 năm liên tiếp, cơ quan có thẩm quyền xem xét chấm dứt hợp đồng làm việc theo quy định của Luật Viên chức 2025. Đây không phải tự động chấm dứt mà phải qua quy trình xem xét.'
+  },
+  {
+    id: 'q-79', docId: 'tt30', difficulty: 'medium',
+    question: 'Tiêu chuẩn 1 về Phẩm chất nhà giáo trong Thông tư 30/2026 có bao nhiêu tiêu chí?',
+    options: ['2 tiêu chí', '3 tiêu chí', '4 tiêu chí', '5 tiêu chí'],
+    correctAnswer: 1,
+    explanation: 'Tiêu chuẩn 1 (Phẩm chất nhà giáo) trong Thông tư 30/2026 gồm 3 tiêu chí: (1.1) Đạo đức nghề nghiệp; (1.2) Phong cách nhà giáo; (1.3) Tư tưởng chính trị và trách nhiệm công dân. Đây là nền tảng phẩm chất mà mọi giáo viên phải đạt được.'
+  },
+  {
+    id: 'q-80', docId: 'tt30', difficulty: 'medium',
+    question: 'Thông tư 30/2026/TT-BGDĐT về chuẩn nghề nghiệp áp dụng cho đối tượng nào?',
+    options: ['Chỉ áp dụng cho giáo viên tiểu học tại các trường công lập thành phố lớn.', 'Áp dụng cho giáo viên, giảng viên tại tất cả các cấp học từ mầm non đến đại học.', 'Áp dụng cho giáo viên cơ sở giáo dục phổ thông công lập trên toàn quốc.', 'Chỉ áp dụng cho giáo viên mới được tuyển dụng sau ngày Thông tư có hiệu lực.'],
+    correctAnswer: 2,
+    explanation: 'Điều 1 Thông tư 30/2026/TT-BGDĐT quy định phạm vi áp dụng: Chuẩn nghề nghiệp áp dụng cho giáo viên đang giảng dạy tại các cơ sở giáo dục phổ thông công lập (gồm tiểu học, THCS, THPT và trường phổ thông nhiều cấp học) trên phạm vi toàn quốc.'
+  },
 ];
