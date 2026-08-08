@@ -7,10 +7,8 @@ import { DayCell } from './sprint-roadmap-day-cell';
 import { DayDetailPanel } from './sprint-roadmap-day-detail-panel';
 
 export function SprintRoadmap() {
-  const { plannerChecked, setPlannerChecked } = useAppStore((s) => ({
-    plannerChecked: s.plannerChecked,
-    setPlannerChecked: s.setPlannerChecked,
-  }));
+  const plannerChecked = useAppStore((s) => s.plannerChecked);
+  const setPlannerChecked = useAppStore((s) => s.setPlannerChecked);
 
   const dayIndex = getDayIndex();
   const daysLeft = getDaysLeft();
