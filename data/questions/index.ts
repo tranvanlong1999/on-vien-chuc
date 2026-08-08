@@ -27,14 +27,14 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Theo Luật Viên chức số 129/2025/QH15, viên chức là công dân nước nào?',
     options: ['Công dân của bất kỳ quốc gia nào trong khối ASEAN.', 'Bắt buộc phải là công dân nước Cộng hòa xã hội chủ nghĩa Việt Nam.', 'Người nước ngoài cư trú hợp pháp tại Việt Nam trên 5 năm.', 'Người có 2 quốc tịch trong đó có quốc tịch Việt Nam không cư trú tại nước ngoài.'],
     correctAnswer: 1,
-    explanation: 'Theo Điều 2 Luật Viên chức 2025, viên chức bắt buộc phải là công dân Việt Nam, được tuyển dụng theo vị trí việc làm và làm việc tại đơn vị sự nghiệp công lập.'
+    explanation: 'Theo Điều 1 Luật Viên chức 2025, viên chức bắt buộc phải là công dân Việt Nam, được tuyển dụng theo vị trí việc làm và làm việc tại đơn vị sự nghiệp công lập.'
   },
   {
     id: 'q-5', docId: 'luat-vien-chuc-2025', difficulty: 'hard',
     question: 'Viên chức muốn ký hợp đồng vụ việc bên ngoài với đơn vị sự nghiệp khác thì cần điều kiện gì?',
     options: ['Chỉ cần ký xong rồi gửi thông báo bằng văn bản cho Hiệu trưởng sau 30 ngày.', 'Phải có sự đồng ý bằng văn bản của người đứng đầu đơn vị sự nghiệp công lập đang quản lý.', 'Không được phép ký trong bất kỳ hoàn cảnh nào để tránh xung đột lợi ích.', 'Được tự ý thực hiện nếu thời gian làm thêm hoàn toàn vào ngày thứ Bảy và Chủ nhật.'],
     correctAnswer: 1,
-    explanation: 'Theo Điều 14 Luật Viên chức 2025, để làm việc bên ngoài dưới dạng hợp đồng vụ việc, viên chức phải bảo đảm hoàn thành nhiệm vụ và có sự đồng ý của người đứng đầu đơn vị.'
+    explanation: 'Theo Điều 13 Luật Viên chức 2025, để làm việc bên ngoài dưới dạng hợp đồng lao động/dịch vụ, viên chức phải bảo đảm không xung đột lợi ích và có sự đồng ý bằng văn bản của người đứng đầu đơn vị nếu hợp đồng làm việc chưa có thỏa thuận.'
   },
   {
     id: 'q-6', docId: 'nghi-dinh-259-2026', difficulty: 'hard',
@@ -84,5 +84,61 @@ export const quizQuestions: QuizQuestion[] = [
     options: ['Từ đủ 1 năm trở lên được cộng 3 điểm.', 'Từ đủ 2 năm trở lên được cộng 5 điểm.', 'Từ đủ 3 năm (36 tháng) trở lên, có đóng BHXH bắt buộc được cộng 5 điểm.', 'Từ đủ 5 năm trở lên được cộng 10 điểm.'],
     correctAnswer: 2,
     explanation: 'Điều 6 Nghị định 93/2026 quy định: Người có thời gian giảng dạy thực tế từ đủ 36 tháng trở lên, có đóng BHXH bắt buộc phù hợp với vị trí tuyển dụng được cộng 05 điểm vào kết quả thi Vòng 2.'
+  },
+  {
+    id: 'q-13', docId: 'luat-vien-chuc-2025', difficulty: 'medium',
+    question: 'Viên chức bị kỷ luật buộc thôi việc trong trường hợp nào mà không cần qua hội đồng kỷ luật?',
+    options: ['Bị xếp loại "không hoàn thành nhiệm vụ" 2 năm liên tiếp.', 'Bị Tòa án kết án phạt tù không được hưởng án treo hoặc bị kết án về tội tham nhũng.', 'Tự ý bỏ việc quá 5 ngày liên tục mà không có lý do chính đáng.', 'Bị phụ huynh học sinh tập thể khiếu nại về vi phạm sư phạm.'],
+    correctAnswer: 1,
+    explanation: 'Khoản 3 Điều 35 Luật Viên chức 2025: Viên chức bị Tòa án kết án tù không hưởng án treo hoặc kết án tội tham nhũng thì đương nhiên bị buộc thôi việc kể từ ngày bản án có hiệu lực pháp luật.'
+  },
+  {
+    id: 'q-14', docId: 'luat-vien-chuc-2025', difficulty: 'hard',
+    question: 'Theo Luật Viên chức 2025, hành vi nào sau đây KHÔNG thuộc phạm vi "những việc viên chức không được làm"?',
+    options: ['Tham gia đình công tại đơn vị sự nghiệp.', 'Đăng tải thông tin sai lệch làm ảnh hưởng uy tín đơn vị lên mạng xã hội.', 'Ký hợp đồng lao động ngoài giờ với tổ chức tư nhân được Hiệu trưởng đồng ý bằng văn bản.', 'Phân biệt đối xử với học sinh khuyết tật khi thực hiện nhiệm vụ dạy học.'],
+    correctAnswer: 2,
+    explanation: 'Khoản 1 Điều 10 cấm tham gia đình công và đăng thông tin sai lệch. Khoản 5 cấm phân biệt đối xử khuyết tật. Riêng việc ký hợp đồng ngoài giờ được Hiệu trưởng đồng ý là được phép theo khoản 1 Điều 13 Luật Viên chức 2025.'
+  },
+  {
+    id: 'q-15', docId: 'luat-vien-chuc-2025', difficulty: 'medium',
+    question: 'Viên chức được kiến nghị về kết quả xếp loại chất lượng trong thời hạn bao nhiêu ngày?',
+    options: ['03 ngày làm việc kể từ ngày công khai kết quả xếp loại.', '05 ngày kể từ ngày công khai kết quả xếp loại chất lượng.', '10 ngày làm việc kể từ ngày nhận được thông báo kết quả.', '15 ngày kể từ ngày kết thúc năm học.'],
+    correctAnswer: 1,
+    explanation: 'Khoản 2 Điều 27 Luật Viên chức 2025: Thời hạn kiến nghị là 05 ngày kể từ ngày công khai kết quả xếp loại chất lượng. Cơ quan có thẩm quyền phải giải quyết trong 10 ngày làm việc.'
+  },
+  {
+    id: 'q-16', docId: 'nghi-dinh-93-2026', difficulty: 'easy',
+    question: 'Điều kiện để một giáo viên tiểu học được thi thăng hạng từ hạng III lên hạng II theo Nghị định 93/2026 là gì?',
+    options: ['Phải có ít nhất 3 năm kinh nghiệm dạy học và bằng cử nhân sư phạm.', 'Phải đạt yêu cầu nhiệm vụ của hạng III; hoàn thành bồi dưỡng; xếp loại Hoàn thành tốt trở lên 2 năm liên tiếp.', 'Chỉ cần được Hiệu trưởng đề cử và có ý kiến đồng ý của Phòng Giáo dục.', 'Phải có bằng Thạc sĩ chuyên ngành giáo dục tiểu học.'],
+    correctAnswer: 1,
+    explanation: 'Theo Nghị định 93/2026, điều kiện thăng hạng: đáp ứng yêu cầu nhiệm vụ hạng hiện tại; hoàn thành chương trình bồi dưỡng theo yêu cầu; được xếp loại hoàn thành tốt nhiệm vụ trở lên trong 2 năm liên tiếp gần nhất.'
+  },
+  {
+    id: 'q-17', docId: 'thong-tu-30-2026', difficulty: 'hard',
+    question: 'Thông tư 30/2026/TT-BGDĐT thay thế văn bản pháp lý nào và có hiệu lực từ khi nào?',
+    options: ['Thay thế Thông tư 14/2011 và có hiệu lực từ ngày 01/01/2026.', 'Thay thế Thông tư 20/2018/TT-BGDĐT và có hiệu lực từ ngày 14/4/2026.', 'Thay thế Thông tư 06/2019/TT-BGDĐT và có hiệu lực từ ngày 30/6/2026.', 'Thay thế Thông tư 25/2015/TT-BGDĐT và có hiệu lực từ ngày 01/9/2026.'],
+    correctAnswer: 1,
+    explanation: 'Thông tư 30/2026/TT-BGDĐT ban hành ngày 14/4/2026, có hiệu lực từ ngày ban hành, thay thế Thông tư số 20/2018/TT-BGDĐT ngày 22/8/2018 quy định chuẩn nghề nghiệp giáo viên cơ sở giáo dục phổ thông.'
+  },
+  {
+    id: 'q-18', docId: 'thong-tu-03-2026', difficulty: 'medium',
+    question: 'Nhà giáo vi phạm quy tắc ứng xử theo Thông tư 03/2026 có thể bị xử lý như thế nào?',
+    options: ['Chỉ bị nhắc nhở nội bộ trong phạm vi trường học, không có biện pháp chính thức.', 'Bị xử lý theo quy định về kỷ luật viên chức tương ứng với mức độ vi phạm.', 'Chỉ bị phạt tiền từ 500.000 đồng đến 3.000.000 đồng không kèm hình thức khác.', 'Bị tự động chuyển sang làm nhân viên hành chính không thực hiện nhiệm vụ giảng dạy.'],
+    correctAnswer: 1,
+    explanation: 'Vi phạm quy tắc ứng xử nhà giáo được xử lý theo các hình thức kỷ luật viên chức: khiển trách, cảnh cáo, cách chức (viên chức quản lý), buộc thôi việc tùy theo tính chất và mức độ vi phạm.'
+  },
+  {
+    id: 'q-19', docId: 'luat-nha-giao-2025', difficulty: 'hard',
+    question: 'Theo Luật Nhà giáo 2025, điều kiện nào là bắt buộc để trở thành nhà giáo trong cơ sở giáo dục công lập?',
+    options: ['Phải có bằng Tiến sĩ chuyên ngành và kinh nghiệm nghiên cứu khoa học trên 3 năm.', 'Phải đạt trình độ chuẩn được đào tạo theo quy định, có phẩm chất và năng lực sư phạm.', 'Phải là công dân Việt Nam, không vi phạm pháp luật và đóng BHXH liên tục 5 năm.', 'Phải tốt nghiệp trường sư phạm đặc cách theo danh sách Bộ Giáo dục và Đào tạo công nhận.'],
+    correctAnswer: 1,
+    explanation: 'Luật Nhà giáo 2025 quy định nhà giáo phải đạt trình độ chuẩn được đào tạo (chuẩn trình độ đào tạo theo từng cấp học) và có đủ phẩm chất, năng lực sư phạm theo quy định.'
+  },
+  {
+    id: 'q-20', docId: 'luat-vien-chuc-2025', difficulty: 'medium',
+    question: 'Theo Luật Viên chức 2025, viên chức được xếp loại "Không hoàn thành nhiệm vụ" thì sẽ bị xử lý như thế nào?',
+    options: ['Tự động bị buộc thôi việc ngay sau kỳ đánh giá năm.', 'Phải thi lại bài kiểm tra nghiệp vụ trong vòng 30 ngày để duy trì hợp đồng.', 'Cơ quan có thẩm quyền xem xét bố trí vào vị trí thấp hơn hoặc cho thôi việc.', 'Chỉ bị cắt thưởng cuối năm, không ảnh hưởng đến hợp đồng làm việc.'],
+    correctAnswer: 2,
+    explanation: 'Khoản 2c Điều 26 Luật Viên chức 2025: Căn cứ kết quả đánh giá xếp loại, cơ quan có thẩm quyền xem xét, bố trí vào vị trí việc làm phù hợp ở trình độ thấp hơn hoặc cho thôi việc đối với trường hợp không hoàn thành nhiệm vụ - không phải tự động buộc thôi việc.'
   },
 ];
