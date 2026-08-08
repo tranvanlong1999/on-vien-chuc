@@ -27,6 +27,8 @@ interface AppState extends UserProgress {
   checkAndUpdateStreak: () => void;
   setPlannerChecked: (checked: boolean[]) => void;
   resetProgress: () => void;
+  syncToCloud: () => Promise<void>;
+  loadFromCloud: () => Promise<void>;
 }
 
 const initialProgress: UserProgress = {
@@ -43,6 +45,38 @@ const initialProgress: UserProgress = {
   plannerChecked: new Array(7).fill(false),
 };
 
+async function syncProgressToSupabase(state: UserProgress) {
+  if (typeof window === 'undefined') return;
+  try {
+    const { supabase, getDeviceId } = await import('./supabase');
+    const deviceId = getDeviceId();
+    if (!deviceId) return;
+    await supabase.from('user_progress').upsert({
+      device_id: deviceId,
+      xp: state.xp,
+      streak: state.streak,
+      last_study_date: state.lastStudyDate,
+      daily_xp: state.dailyXP,
+      last_xp_date: state.lastXPDate,
+      mastered_cards: state.masteredCards,
+      mistakes: state.mistakes,
+      quiz_scores: state.quizScores,
+      reading_progress: state.readingProgress,
+      flashcard_srs: state.flashcardSRS,
+      planner_checked: state.plannerChecked,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'device_id' });
+  } catch {
+    // Silently fail - localStorage is primary
+  }
+}
+
+let syncTimeout: ReturnType<typeof setTimeout> | null = null;
+function debouncedSync(state: UserProgress) {
+  if (syncTimeout) clearTimeout(syncTimeout);
+  syncTimeout = setTimeout(() => syncProgressToSupabase(state), 3000);
+}
+
 export const useAppStore = create<AppState>()(
   persist(
     (set, get) => ({
@@ -56,6 +90,7 @@ export const useAppStore = create<AppState>()(
           if (isNew) get().addXP(XP_REWARDS.readArticle, 'readArticle');
           return { readingProgress: { ...state.readingProgress, [docId]: newList } };
         });
+        debouncedSync(get());
       },
 
       saveQuizScore: (docId, score) => {
@@ -67,6 +102,7 @@ export const useAppStore = create<AppState>()(
           }
           return {};
         });
+        debouncedSync(get());
       },
 
       addMistake: (questionId) => {
@@ -86,6 +122,7 @@ export const useAppStore = create<AppState>()(
           get().addXP(XP_REWARDS.masterFlashcard, 'masterFlashcard');
           return { masteredCards: [...state.masteredCards, cardId] };
         });
+        debouncedSync(get());
       },
 
       unmasterFlashcard: (cardId) => {
@@ -132,14 +169,54 @@ export const useAppStore = create<AppState>()(
           }
           return { streak: newStreak, lastStudyDate: today };
         });
+        debouncedSync(get());
       },
 
       setPlannerChecked: (checked) => {
         set({ plannerChecked: checked });
+        debouncedSync(get());
       },
 
       resetProgress: () => {
         set(initialProgress);
+      },
+
+      syncToCloud: async () => {
+        await syncProgressToSupabase(get());
+      },
+
+      loadFromCloud: async () => {
+        if (typeof window === 'undefined') return;
+        try {
+          const { supabase, getDeviceId } = await import('./supabase');
+          const deviceId = getDeviceId();
+          if (!deviceId) return;
+          const { data, error } = await supabase
+            .from('user_progress')
+            .select('*')
+            .eq('device_id', deviceId)
+            .single();
+          if (error || !data) return;
+          // Only load cloud data if it has more XP (cloud is ahead)
+          const currentXP = get().xp;
+          if (data.xp > currentXP) {
+            set({
+              xp: data.xp,
+              streak: data.streak,
+              lastStudyDate: data.last_study_date,
+              dailyXP: data.daily_xp,
+              lastXPDate: data.last_xp_date,
+              masteredCards: data.mastered_cards || [],
+              mistakes: data.mistakes || [],
+              quizScores: data.quiz_scores || {},
+              readingProgress: data.reading_progress || {},
+              flashcardSRS: data.flashcard_srs || {},
+              plannerChecked: data.planner_checked || new Array(7).fill(false),
+            });
+          }
+        } catch {
+          // Silently fail
+        }
       },
     }),
     {
