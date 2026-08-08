@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { Eye } from 'lucide-react';
+import { RotateCcw } from 'lucide-react';
 import { Flashcard } from '@/types';
 
 const SWIPE_THRESHOLD = 150;
@@ -110,7 +110,7 @@ export function SwipeCard({ card, docLabel, onRate }: SwipeCardProps) {
               <p className="text-slate-800 font-semibold text-lg leading-snug">{card.question}</p>
               {card.hint && <p className="text-xs text-slate-400 mt-3">Gợi ý: {card.hint}</p>}
               <div className="absolute bottom-4 flex items-center gap-1 text-slate-400 text-xs">
-                <Eye className="w-3.5 h-3.5" /><span>Bấm / Enter để lật thẻ</span>
+                <RotateCcw className="w-3.5 h-3.5" /><span>Bấm / Enter để lật thẻ</span>
               </div>
             </div>
             {/* Back */}
