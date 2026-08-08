@@ -3,9 +3,9 @@ import type { LawDocument } from '@/types';
 import { luatNhaGiao } from './luat-nha-giao';
 import { luatVienChuc } from './luat-vien-chuc';
 import { nd93 } from './nd-93-2026';
-import { tt03UngXu } from './tt-03-2026-ung-xu';
+import { tt03 as tt03UngXu } from './tt03';
 import { nd259 } from './nd-259-2026';
-import { tt30ChuanNgheNghiep } from './tt-30-2026-chuan-nghe-nghiep';
+import { tt30 as tt30ChuanNgheNghiep } from './tt30';
 
 export const lawDocuments: LawDocument[] = [
   luatNhaGiao,
