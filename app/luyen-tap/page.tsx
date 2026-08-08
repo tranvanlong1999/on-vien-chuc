@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Layers, Zap, PenLine, Link2, Flame, MessageSquare, Trophy } from 'lucide-react';
+import { Layers, Zap, PenLine, Link2, Flame, MessageSquare, Trophy, Swords } from 'lucide-react';
 
 const games = [
   {
@@ -57,6 +57,16 @@ const games = [
     title: 'Thử Thách Ngày',
     desc: '5 câu mỗi ngày · ưu tiên nội dung 2026 · +50 XP',
     color: 'from-orange-500 to-red-600',
+    badge: 'Mới',
+    isNew: true,
+  },
+  {
+    href: '/luyen-tap/vuot-ai',
+    icon: Swords,
+    emoji: '👾',
+    title: 'Vượt Ải Boss',
+    desc: '9 Boss · trả lời đúng hạ HP boss, sai bị phản đòn · +150 XP/Boss',
+    color: 'from-red-600 to-red-800',
     badge: 'Mới',
     isNew: true,
   },

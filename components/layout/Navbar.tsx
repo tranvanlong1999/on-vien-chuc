@@ -14,6 +14,7 @@ const navLinks = [
   { href: '/de-thi', label: 'Đề thi' },
   { href: '/so-do', label: 'Sơ đồ' },
   { href: '/tien-do', label: 'Tiến độ' },
+  { href: '/thanh-tich', label: '🏅 Thành tích' },
 ];
 
 export function Navbar() {
