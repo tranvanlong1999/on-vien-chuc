@@ -14,17 +14,16 @@ interface Props { questions: FillBlankQuestion[]; documents: LawDocument[] }
 const ROUND_SIZE = 10;
 
 export function FillBlankClient({ questions, documents }: Props) {
-  const { gameHighScores, saveGameHighScore, addXP } = useAppStore((s) => ({
-    gameHighScores: s.gameHighScores,
-    saveGameHighScore: s.saveGameHighScore,
-    addXP: s.addXP,
-  }));
+  const gameHighScores = useAppStore((s) => s.gameHighScores);
+  const saveGameHighScore = useAppStore((s) => s.saveGameHighScore);
+  const addXP = useAppStore((s) => s.addXP);
 
   const [docId, setDocId] = useState('all');
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(0);
+  const scoreRef = useRef(0);
   const [done, setDone] = useState(false);
   const [key, setKey] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -47,7 +46,8 @@ export function FillBlankClient({ questions, documents }: Props) {
     const correct = normalizeAnswer(input) === normalizeAnswer(q?.blank ?? '');
     setSubmitted(true);
     if (correct) {
-      setScore((s) => s + 1);
+      scoreRef.current += 1;
+      setScore(scoreRef.current);
       addXP(8, 'fillBlankCorrect');
     }
   };
@@ -55,7 +55,7 @@ export function FillBlankClient({ questions, documents }: Props) {
   const next = () => {
     if (idx + 1 >= deck.length) {
       // score already incremented in handleSubmit — save directly
-      saveGameHighScore('fillBlank', score);
+      saveGameHighScore('fillBlank', scoreRef.current);
       setDone(true);
     } else {
       setIdx((i) => i + 1);

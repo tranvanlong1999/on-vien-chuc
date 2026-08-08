@@ -14,11 +14,9 @@ const SECONDS_PER_QUESTION = 10;
 const QUESTIONS_PER_ROUND = 10;
 
 export function SpeedQuizClient({ questions, documents }: Props) {
-  const { gameHighScores, saveGameHighScore, addXP } = useAppStore((s) => ({
-    gameHighScores: s.gameHighScores,
-    saveGameHighScore: s.saveGameHighScore,
-    addXP: s.addXP,
-  }));
+  const gameHighScores = useAppStore((s) => s.gameHighScores);
+  const saveGameHighScore = useAppStore((s) => s.saveGameHighScore);
+  const addXP = useAppStore((s) => s.addXP);
 
   const [docId, setDocId] = useState('all');
   const [started, setStarted] = useState(false);
@@ -29,6 +27,7 @@ export function SpeedQuizClient({ questions, documents }: Props) {
   const [timeLeft, setTimeLeft] = useState(SECONDS_PER_QUESTION);
   const [key, setKey] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const scoreRef = useRef(0);
 
   const deck = useMemo(() => {
     const pool = docId === 'all' ? questions : questions.filter((q) => q.docId === docId);
@@ -62,7 +61,7 @@ export function SpeedQuizClient({ questions, documents }: Props) {
         if (t <= 1) {
           clearInterval(timerRef.current!);
           setSelected(-1); // timeout = wrong
-          setTimeout(() => advanceOrFinish(score), 800);
+          setTimeout(() => advanceOrFinish(scoreRef.current), 800);
           return 0;
         }
         return t - 1;
@@ -77,7 +76,7 @@ export function SpeedQuizClient({ questions, documents }: Props) {
     setSelected(i);
     const correct = i === q.correctAnswer;
     const newScore = correct ? score + 1 : score;
-    if (correct) { setScore(newScore); addXP(5, 'correctAnswer'); }
+    if (correct) { setScore(newScore); scoreRef.current = newScore; addXP(5, 'correctAnswer'); }
     setTimeout(() => advanceOrFinish(newScore), 600);
   };
 

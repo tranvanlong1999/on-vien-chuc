@@ -13,11 +13,9 @@ interface Props { pairs: MatchPair[]; documents: LawDocument[] }
 const PAIRS_PER_ROUND = 6;
 
 export function WordMatchClient({ pairs, documents }: Props) {
-  const { gameHighScores, saveGameHighScore, addXP } = useAppStore((s) => ({
-    gameHighScores: s.gameHighScores,
-    saveGameHighScore: s.saveGameHighScore,
-    addXP: s.addXP,
-  }));
+  const gameHighScores = useAppStore((s) => s.gameHighScores);
+  const saveGameHighScore = useAppStore((s) => s.saveGameHighScore);
+  const addXP = useAppStore((s) => s.addXP);
 
   const [docId, setDocId] = useState('all');
   const [key, setKey] = useState(0);
@@ -48,8 +46,8 @@ export function WordMatchClient({ pairs, documents }: Props) {
   };
 
   const handleDefClick = (def: string) => {
-    const pairId = findPairByDef(def)?.id;
-    if (pairId && matched.has(findPairByDef(def)!.term)) return;
+    const defPair = findPairByDef(def);
+    if (defPair && matched.has(defPair.term)) return;
     setSelectedDef(def);
     if (selectedTerm !== null) checkMatch(selectedTerm, def);
   };

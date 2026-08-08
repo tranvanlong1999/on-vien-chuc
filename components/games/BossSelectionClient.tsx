@@ -14,10 +14,8 @@ interface Props {
 const BOSS_MAX_HP = 100;
 
 export function BossSelectionClient({ documents, questionCounts }: Props) {
-  const { bossDefeated, bossHP } = useAppStore((s) => ({
-    bossDefeated: s.bossDefeated,
-    bossHP: s.bossHP,
-  }));
+  const bossDefeated = useAppStore((s) => s.bossDefeated);
+  const bossHP = useAppStore((s) => s.bossHP);
 
   return (
     <div className="space-y-6 animate-slide-up">

@@ -18,13 +18,11 @@ const PLAYER_MAX_HP = 100;
 const DAMAGE = 10;
 
 export function BossBattleClient({ doc, questions }: Props) {
-  const { bossHP, bossDefeated, updateBossHP, defeatBoss, addXP } = useAppStore((s) => ({
-    bossHP: s.bossHP,
-    bossDefeated: s.bossDefeated,
-    updateBossHP: s.updateBossHP,
-    defeatBoss: s.defeatBoss,
-    addXP: s.addXP,
-  }));
+  const bossHP = useAppStore((s) => s.bossHP);
+  const bossDefeated = useAppStore((s) => s.bossDefeated);
+  const updateBossHP = useAppStore((s) => s.updateBossHP);
+  const defeatBoss = useAppStore((s) => s.defeatBoss);
+  const addXP = useAppStore((s) => s.addXP);
 
   const isAlreadyDefeated = bossDefeated.includes(doc.id);
   const savedBossHP = bossHP[doc.id] ?? BOSS_MAX_HP;

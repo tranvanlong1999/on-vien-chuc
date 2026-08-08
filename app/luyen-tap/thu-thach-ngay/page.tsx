@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { DailyChallengeClient } from '@/components/games/DailyChallengeClient';
 import { lawDocuments } from '@/data/documents';
 import { quizQuestions } from '@/data/questions';

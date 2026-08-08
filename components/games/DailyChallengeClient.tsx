@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useAppStore } from '@/lib/store';
 import { QuizQuestion, LawDocument } from '@/types';
 import { cn } from '@/lib/utils';
-import { CheckCircle2, XCircle, Flame, Trophy, RotateCcw } from 'lucide-react';
+import { CheckCircle2, XCircle, Flame } from 'lucide-react';
 
 interface Props {
   questions: QuizQuestion[];
@@ -13,12 +13,10 @@ interface Props {
 }
 
 export function DailyChallengeClient({ questions, documents, dateKey }: Props) {
-  const { dailyChallengeCompleted, completeDailyChallenge, addMistake, addXP } = useAppStore((s) => ({
-    dailyChallengeCompleted: s.dailyChallengeCompleted,
-    completeDailyChallenge: s.completeDailyChallenge,
-    addMistake: s.addMistake,
-    addXP: s.addXP,
-  }));
+  const dailyChallengeCompleted = useAppStore((s) => s.dailyChallengeCompleted);
+  const completeDailyChallenge = useAppStore((s) => s.completeDailyChallenge);
+  const addMistake = useAppStore((s) => s.addMistake);
+  const addXP = useAppStore((s) => s.addXP);
 
   const alreadyDone = dailyChallengeCompleted[dateKey] ?? false;
 

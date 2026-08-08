@@ -6,28 +6,45 @@ import { useAppStore } from '@/lib/store';
 import { checkNewAchievements } from '@/lib/achievements';
 
 export function AchievementToast() {
-  const state = useAppStore((s) => s);
-  const [queue, setQueue] = useState<{ emoji: string; title: string }[]>([]);
-  // Track what we've already queued this session to avoid duplicate toasts
-  const notifiedRef = useRef<Set<string>>(new Set(state.achievements ?? []));
+  const xp = useAppStore((s) => s.xp);
+  const streak = useAppStore((s) => s.streak);
+  const quizScores = useAppStore((s) => s.quizScores);
+  const masteredCards = useAppStore((s) => s.masteredCards);
+  const readingProgress = useAppStore((s) => s.readingProgress);
+  const bossDefeated = useAppStore((s) => s.bossDefeated);
+  const gameHighScores = useAppStore((s) => s.gameHighScores);
+  const dailyChallengeCompleted = useAppStore((s) => s.dailyChallengeCompleted);
+  const achievements = useAppStore((s) => s.achievements);
+  const unlockAchievement = useAppStore((s) => s.unlockAchievement);
 
-  const xp = state.xp;
-  const streak = state.streak;
-  const quizCount = Object.keys(state.quizScores).length;
-  const masteredCount = state.masteredCards.length;
-  const readCount = Object.values(state.readingProgress).reduce((a, b) => a + b.length, 0);
-  const bossCount = (state.bossDefeated ?? []).length;
-  const speedScore = state.gameHighScores?.['speedQuiz'] ?? 0;
-  const fillScore = state.gameHighScores?.['fillBlank'] ?? 0;
-  const dailyCount = Object.keys(state.dailyChallengeCompleted ?? {}).length;
+  const [queue, setQueue] = useState<{ emoji: string; title: string }[]>([]);
+  const notifiedRef = useRef<Set<string>>(new Set(achievements ?? []));
+
+  const quizCount = Object.keys(quizScores).length;
+  const masteredCount = masteredCards.length;
+  const readCount = Object.values(readingProgress).reduce((a, b) => a + b.length, 0);
+  const bossCount = (bossDefeated ?? []).length;
+  const speedScore = gameHighScores?.['speedQuiz'] ?? 0;
+  const fillScore = gameHighScores?.['fillBlank'] ?? 0;
+  const dailyCount = Object.keys(dailyChallengeCompleted ?? {}).length;
 
   useEffect(() => {
-    const newOnes = checkNewAchievements(state, state.achievements ?? []).filter(
+    const snapshot = {
+      xp, streak, quizScores, masteredCards, readingProgress,
+      bossDefeated: bossDefeated ?? [],
+      gameHighScores: gameHighScores ?? {},
+      dailyChallengeCompleted: dailyChallengeCompleted ?? {},
+      achievements: achievements ?? [],
+      flashcardSRS: {}, mistakes: [], mistakeHistory: {},
+      dailyXP: 0, lastXPDate: '', lastStudyDate: '',
+      plannerChecked: [], bossHP: {},
+    };
+    const newOnes = checkNewAchievements(snapshot as never, achievements ?? []).filter(
       (a) => !notifiedRef.current.has(a.id)
     );
     for (const a of newOnes) {
       notifiedRef.current.add(a.id);
-      state.unlockAchievement(a.id);
+      unlockAchievement(a.id);
       setQueue((q) => [...q, { emoji: a.emoji, title: a.title }]);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps

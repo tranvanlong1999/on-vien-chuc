@@ -1,5 +1,5 @@
 import { SpeedQuizClient } from '@/components/games/SpeedQuizClient';
-import { questions } from '@/data/questions';
+import { quizQuestions } from '@/data/questions';
 import { lawDocuments } from '@/data/documents';
 
 export const metadata = {
@@ -8,5 +8,5 @@ export const metadata = {
 };
 
 export default function TocDoPage() {
-  return <SpeedQuizClient questions={questions} documents={lawDocuments} />;
+  return <SpeedQuizClient questions={quizQuestions} documents={lawDocuments} />;
 }
