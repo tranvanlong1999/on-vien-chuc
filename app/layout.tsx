@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
@@ -7,11 +7,14 @@ import { StoreProvider } from '@/components/layout/StoreProvider';
 
 const inter = Inter({ subsets: ['latin', 'vietnamese'], variable: '--font-inter' });
 
+export const viewport: Viewport = {
+  themeColor: '#4f46e5',
+};
+
 export const metadata: Metadata = {
   title: 'HVC2026 — Ôn thi Viên chức Tiểu học',
   description: 'Nền tảng ôn thi viên chức giáo viên tiểu học 2026. Flashcard, trắc nghiệm, đề thi thử, sơ đồ tư duy.',
   manifest: '/manifest.json',
-  themeColor: '#4f46e5',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
