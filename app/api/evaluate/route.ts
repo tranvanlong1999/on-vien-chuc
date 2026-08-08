@@ -72,7 +72,7 @@ Hãy chấm điểm bài làm theo đúng rubric trên và trả về JSON.`;
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
-      model: 'gemini-2.0-flash',
+      model: 'gemini-1.5-flash',
       systemInstruction: SYSTEM_PROMPT,
       generationConfig: {
         temperature: 0.3,
