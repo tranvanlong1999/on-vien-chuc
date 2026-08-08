@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Flame, Zap, BookOpen } from 'lucide-react';
+import { Flame, Zap, BookOpen, MessageSquare } from 'lucide-react';
 import { useAppStore } from '@/lib/store';
 import { getXPLevel } from '@/lib/utils';
 import { cn } from '@/lib/utils';
@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/', label: 'Tổng quan' },
   { href: '/hoc', label: 'Học' },
   { href: '/luyen-tap/flashcards', label: 'Luyện tập' },
+  { href: '/luyen-tap/tinh-huong', label: 'Tình huống' },
   { href: '/de-thi', label: 'Đề thi' },
   { href: '/so-do', label: 'Sơ đồ' },
   { href: '/tien-do', label: 'Tiến độ' },
