@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Layers, Zap, Pencil, Link, Flame, MessageSquare, Trophy } from 'lucide-react';
+import { Layers, Zap, Pencil, Link as LinkIcon, Flame, MessageSquare, Trophy } from 'lucide-react';
 
 const games = [
   {
@@ -42,7 +42,7 @@ const games = [
   },
   {
     href: '/luyen-tap/noi-tu',
-    icon: Link,
+    icon: LinkIcon,
     emoji: '🔗',
     title: 'Nối Từ',
     desc: 'Ghép số điều với nội dung tương ứng trong 6 giây',
