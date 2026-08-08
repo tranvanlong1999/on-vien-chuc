@@ -13,14 +13,14 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Chính sách tiền lương của nhà giáo được Luật Nhà giáo 2025 quy định như thế nào?',
     options: ['Xếp ngang bằng với mức lương trung bình của các bộ ngành hành chính.', 'Xếp cao nhất trong hệ thống thang bậc lương hành chính sự nghiệp của Đảng và Nhà nước.', 'Xếp thấp hơn mức lương tối thiểu vùng nhưng được bù đắp bằng phụ cấp đứng lớp.', 'Tùy thuộc vào nguồn thu xã hội hóa của từng cơ sở giáo dục tự quyết định.'],
     correctAnswer: 1,
-    explanation: 'Theo Điều 27 Luật Nhà giáo 2025, lương của nhà giáo được xếp cao nhất trong hệ thống thang bậc lương hành chính sự nghiệp của Đảng và Nhà nước, cộng với phụ cấp ưu đãi nghề đặc thù.'
+    explanation: 'Theo Điều 23 Luật Nhà giáo 2025, lương của nhà giáo được xếp cao nhất trong hệ thống thang bậc lương hành chính sự nghiệp của Đảng và Nhà nước, cộng với phụ cấp ưu đãi nghề đặc thù.'
   },
   {
     id: 'q-3', docId: 'luat-nha-giao-2025', difficulty: 'medium',
     question: 'Quyền nào sau đây thể hiện tính độc lập chuyên môn của nhà giáo được quy định tại Luật Nhà giáo 2025?',
     options: ['Quyền tự ý bớt chương trình học nếu cảm thấy học sinh không tiếp thu kịp.', 'Quyền tự chủ chuyên môn và lựa chọn phương pháp giảng dạy phù hợp.', 'Quyền từ chối dạy các học sinh khuyết tật hòa nhập tại lớp.', 'Quyền tổ chức các lớp dạy thêm thu tiền trực tiếp tại nhà riêng không báo cáo.'],
     correctAnswer: 1,
-    explanation: 'Điều 9 Luật Nhà giáo 2025 quy định nhà giáo có quyền tự chủ chuyên môn, lựa chọn phương pháp giảng dạy, giáo trình phù hợp nhằm phát triển tối đa năng lực học sinh.'
+    explanation: 'Điều 8 Luật Nhà giáo 2025 quy định nhà giáo có quyền tự chủ chuyên môn, lựa chọn phương pháp giảng dạy, giáo trình phù hợp nhằm phát triển tối đa năng lực học sinh.'
   },
   {
     id: 'q-4', docId: 'luat-vien-chuc-2025', difficulty: 'easy',
@@ -148,70 +148,70 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Theo Luật Nhà giáo số 73/2025/QH15, nhà giáo được nghỉ hè bao nhiêu tuần mỗi năm?',
     options: ['4 tuần', '6 tuần', '8 tuần', '10 tuần'],
     correctAnswer: 2,
-    explanation: 'Điều 24 Luật Nhà giáo 2025 quy định nhà giáo được nghỉ hè 8 tuần mỗi năm học, đây là quy định mới so với trước đây. Thời gian nghỉ hè được tính vào thời gian làm việc.'
+    explanation: 'Điều 16 (khoản 3) Luật Nhà giáo 2025 quy định chế độ làm việc của nhà giáo, trong đó thời gian nghỉ hè hàng năm được bố trí phù hợp theo từng cấp học theo quy định của Chính phủ. Thời gian nghỉ hè 8 tuần được thực hiện theo văn bản hướng dẫn của Chính phủ và được tính vào thời gian làm việc.'
   },
   {
     id: 'q-22', docId: 'luat-nha-giao-2025', difficulty: 'medium',
     question: 'Thời hiệu xử lý kỷ luật nhà giáo vi phạm thông thường theo Luật Nhà giáo 2025 là bao lâu?',
     options: ['2 năm kể từ thời điểm phát hiện vi phạm.', '3 năm kể từ thời điểm xảy ra vi phạm.', '5 năm kể từ thời điểm xảy ra vi phạm.', '10 năm đối với mọi hành vi vi phạm.'],
     correctAnswer: 2,
-    explanation: 'Theo Điều 42 Luật Nhà giáo 2025, thời hiệu xử lý kỷ luật nhà giáo là 5 năm kể từ thời điểm xảy ra vi phạm (trừ vi phạm về tham nhũng hoặc gây hậu quả đặc biệt nghiêm trọng là 10 năm).'
+    explanation: 'Nhà giáo là viên chức nên thời hiệu xử lý kỷ luật áp dụng theo Luật Viên chức 2025 (Điều 33): 2 năm với vi phạm ít nghiêm trọng, 5 năm với vi phạm nghiêm trọng, 10 năm đối với vi phạm về tham nhũng hoặc gây hậu quả đặc biệt nghiêm trọng.'
   },
   {
     id: 'q-23', docId: 'luat-nha-giao-2025', difficulty: 'medium',
     question: 'Luật Nhà giáo 2025 quy định có bao nhiêu hình thức kỷ luật đối với nhà giáo?',
     options: ['2 hình thức: cảnh cáo và buộc thôi việc.', '3 hình thức: khiển trách, cảnh cáo, buộc thôi việc.', '4 hình thức: khiển trách, cảnh cáo, hạ bậc lương, buộc thôi việc.', '5 hình thức: khiển trách, cảnh cáo, hạ bậc lương, cách chức, buộc thôi việc.'],
     correctAnswer: 2,
-    explanation: 'Điều 41 Luật Nhà giáo 2025 quy định 4 hình thức kỷ luật đối với nhà giáo không giữ chức vụ quản lý: (1) Khiển trách; (2) Cảnh cáo; (3) Hạ bậc lương; (4) Buộc thôi việc. Nhà giáo giữ chức vụ quản lý còn có thêm hình thức cách chức.'
+    explanation: 'Điều 35 Luật Nhà giáo 2025 quy định xử lý kỷ luật nhà giáo; theo đó nhà giáo không giữ chức vụ quản lý có 4 hình thức kỷ luật: (1) Khiển trách; (2) Cảnh cáo; (3) Hạ bậc lương; (4) Buộc thôi việc. Nhà giáo giữ chức vụ quản lý còn có thêm hình thức cách chức.'
   },
   {
     id: 'q-24', docId: 'luat-nha-giao-2025', difficulty: 'easy',
     question: 'Theo Luật Nhà giáo 2025, chứng chỉ hành nghề nhà giáo do cơ quan nào cấp?',
     options: ['Ủy ban nhân dân tỉnh/thành phố nơi nhà giáo công tác.', 'Sở Giáo dục và Đào tạo địa phương.', 'Bộ Giáo dục và Đào tạo.', 'Hội đồng nhân dân tỉnh theo phân cấp.'],
     correctAnswer: 2,
-    explanation: 'Theo Điều 16 Luật Nhà giáo 2025, Bộ Giáo dục và Đào tạo là cơ quan có thẩm quyền cấp chứng chỉ hành nghề nhà giáo trên toàn quốc, đảm bảo tính thống nhất trong quản lý chất lượng nhà giáo.'
+    explanation: 'Luật Nhà giáo 2025 quy định Bộ Giáo dục và Đào tạo là cơ quan có thẩm quyền cấp chứng chỉ hành nghề nhà giáo trên toàn quốc, đảm bảo tính thống nhất trong quản lý chất lượng nhà giáo.'
   },
   {
     id: 'q-25', docId: 'luat-nha-giao-2025', difficulty: 'medium',
     question: 'Hành vi nào sau đây bị nghiêm cấm đối với nhà giáo theo Luật Nhà giáo 2025?',
     options: ['Yêu cầu học sinh làm bài tập nâng cao ngoài chương trình chuẩn.', 'Tổ chức hoạt động ngoại khóa tự nguyện ngoài giờ học chính thức.', 'Xúc phạm danh dự, bạo hành, gian lận trong kiểm tra đánh giá học sinh.', 'Liên hệ với phụ huynh học sinh qua mạng xã hội để trao đổi về kết quả học tập.'],
     correctAnswer: 2,
-    explanation: 'Điều 10 Luật Nhà giáo 2025 nghiêm cấm nhà giáo xúc phạm danh dự, nhân phẩm, bạo hành học sinh; gian lận trong kiểm tra, đánh giá, thi cử; thu tiền trái quy định và các hành vi phi đạo đức nghề nghiệp khác.'
+    explanation: 'Điều 11 Luật Nhà giáo 2025 nghiêm cấm nhà giáo xúc phạm danh dự, nhân phẩm, bạo hành học sinh; gian lận trong kiểm tra, đánh giá, thi cử; thu tiền trái quy định và các hành vi phi đạo đức nghề nghiệp khác.'
   },
   {
     id: 'q-26', docId: 'luat-nha-giao-2025', difficulty: 'medium',
     question: 'Theo Luật Nhà giáo 2025, lương của nhà giáo được xếp như thế nào trong hệ thống thang bảng lương?',
     options: ['Ngang bằng với mức lương trung bình của cán bộ công chức nhà nước.', 'Cao nhất trong hệ thống thang bảng lương hành chính sự nghiệp, cộng với phụ cấp ưu đãi nghề đặc thù.', 'Thấp hơn lương công chức nhưng được bù đắp toàn bộ bằng phụ cấp thâm niên.', 'Do mỗi địa phương tự quyết định dựa trên nguồn thu ngân sách.'],
     correctAnswer: 1,
-    explanation: 'Điều 27 Luật Nhà giáo 2025 quy định: Lương của nhà giáo được xếp cao nhất trong hệ thống thang bảng lương hành chính sự nghiệp của Đảng và Nhà nước, đồng thời được hưởng phụ cấp ưu đãi nghề và các chính sách đặc thù khác.'
+    explanation: 'Điều 23 Luật Nhà giáo 2025 quy định: Lương của nhà giáo được xếp cao nhất trong hệ thống thang bảng lương hành chính sự nghiệp của Đảng và Nhà nước, đồng thời được hưởng phụ cấp ưu đãi nghề và các chính sách đặc thù khác.'
   },
   {
     id: 'q-27', docId: 'luat-nha-giao-2025', difficulty: 'easy',
     question: 'Theo Luật Nhà giáo 2025, nhà giáo có quyền gì liên quan đến hoạt động chuyên môn?',
     options: ['Quyền tự ý thay đổi chương trình giáo dục quốc gia không cần phê duyệt.', 'Quyền tự chủ chuyên môn và lựa chọn phương pháp giảng dạy phù hợp với học sinh.', 'Quyền từ chối thực hiện nhiệm vụ được phân công nếu không phù hợp chuyên ngành đào tạo.', 'Quyền tự cấp chứng chỉ học tập cho học sinh theo tiêu chí riêng của giáo viên.'],
     correctAnswer: 1,
-    explanation: 'Điều 9 Luật Nhà giáo 2025 ghi nhận quyền tự chủ chuyên môn của nhà giáo: được lựa chọn phương pháp, hình thức tổ chức dạy học, giáo dục phù hợp với đối tượng học sinh trong khuôn khổ chương trình giáo dục quốc gia.'
+    explanation: 'Điều 8 Luật Nhà giáo 2025 ghi nhận quyền tự chủ chuyên môn của nhà giáo: được lựa chọn phương pháp, hình thức tổ chức dạy học, giáo dục phù hợp với đối tượng học sinh trong khuôn khổ chương trình giáo dục quốc gia.'
   },
   {
     id: 'q-28', docId: 'luat-nha-giao-2025', difficulty: 'hard',
     question: 'Nhà giáo vi phạm có thể bị đình chỉ giảng dạy tối đa bao lâu theo Luật Nhà giáo 2025?',
     options: ['Tối đa 3 tháng trong thời gian chờ xử lý kỷ luật.', 'Tối đa 6 tháng và được xem xét gia hạn thêm 6 tháng.', 'Tối đa 12 tháng trong thời gian xem xét, xử lý kỷ luật.', 'Không giới hạn thời gian đình chỉ nếu vi phạm đặc biệt nghiêm trọng.'],
     correctAnswer: 2,
-    explanation: 'Theo Điều 43 Luật Nhà giáo 2025, nhà giáo có thể bị đình chỉ giảng dạy tối đa 12 tháng trong thời gian cơ quan có thẩm quyền xem xét, xử lý kỷ luật. Trong thời gian đình chỉ, nhà giáo vẫn được hưởng 50% lương.'
+    explanation: 'Theo Điều 36 Luật Nhà giáo 2025, nhà giáo vi phạm có thể bị tạm đình chỉ giảng dạy trong thời gian xem xét, xử lý kỷ luật. Thời gian cụ thể và mức lương trong thời gian đình chỉ áp dụng theo pháp luật về viên chức đối với nhà giáo công lập.'
   },
   {
     id: 'q-29', docId: 'luat-nha-giao-2025', difficulty: 'medium',
     question: 'Luật Nhà giáo 2025 quy định nghĩa vụ bắt buộc nào mà nhà giáo phải thực hiện liên quan đến phát triển bản thân?',
     options: ['Phải có bằng Thạc sĩ trở lên trong vòng 5 năm đầu công tác.', 'Học tập suốt đời, thực hiện đúng chương trình và chuẩn nghề nghiệp nhà giáo.', 'Tham dự tối thiểu 200 tiết bồi dưỡng chuyên môn mỗi năm học.', 'Xuất bản ít nhất 1 bài báo khoa học mỗi năm trong các tạp chí giáo dục.'],
     correctAnswer: 1,
-    explanation: 'Điều 8 Luật Nhà giáo 2025 quy định nghĩa vụ của nhà giáo bao gồm: học tập, bồi dưỡng nâng cao trình độ chuyên môn, nghiệp vụ suốt đời; thực hiện đúng chương trình giáo dục và chuẩn nghề nghiệp; không ngừng nâng cao năng lực sư phạm.'
+    explanation: 'Điều 9 Luật Nhà giáo 2025 quy định nghĩa vụ của nhà giáo bao gồm: học tập, bồi dưỡng nâng cao trình độ chuyên môn, nghiệp vụ suốt đời; thực hiện đúng chương trình giáo dục và chuẩn nghề nghiệp; không ngừng nâng cao năng lực sư phạm.'
   },
   {
     id: 'q-30', docId: 'luat-nha-giao-2025', difficulty: 'hard',
     question: 'Từ thời điểm nào nhà giáo không phải thực hiện chế độ tập sự khi mới vào nghề theo Luật Nhà giáo 2025?',
     options: ['Từ ngày 01/01/2026.', 'Từ ngày 01/4/2026.', 'Từ ngày 01/7/2026.', 'Từ ngày 01/9/2026 (đầu năm học mới).'],
     correctAnswer: 2,
-    explanation: 'Theo khoản 3 Điều 78 Luật Nhà giáo 2025 và Nghị định 93/2026, từ ngày 01/7/2026 bãi bỏ hoàn toàn chế độ tập sự đối với nhà giáo. Nhà giáo mới tuyển dụng được hưởng 100% lương và thực hiện nhiệm vụ đầy đủ ngay từ khi ký hợp đồng.'
+    explanation: 'Theo Nghị định 93/2026/NĐ-CP hướng dẫn thi hành Luật Nhà giáo, từ ngày 01/7/2026 bãi bỏ hoàn toàn chế độ tập sự đối với nhà giáo. Nhà giáo mới tuyển dụng được hưởng 100% lương và thực hiện nhiệm vụ đầy đủ ngay từ khi ký hợp đồng.'
   },
 
   // ===== LUẬT VIÊN CHỨC 129/2025 — câu 31–40 =====
@@ -220,14 +220,14 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Điểm khác biệt căn bản nhất phân biệt viên chức với công chức theo Luật Viên chức 2025 là gì?',
     options: ['Viên chức không được nghỉ phép năm, công chức được nghỉ phép năm.', 'Viên chức làm việc theo hợp đồng làm việc tại đơn vị sự nghiệp công lập, công chức làm việc theo quyết định tại cơ quan hành chính nhà nước.', 'Viên chức không phải đóng BHXH bắt buộc, còn công chức phải đóng đầy đủ.', 'Viên chức chỉ được tuyển dụng theo hình thức xét tuyển, không được thi tuyển.'],
     correctAnswer: 1,
-    explanation: 'Điều 2 Luật Viên chức 2025: Viên chức là công dân Việt Nam được tuyển dụng theo vị trí việc làm, làm việc tại đơn vị sự nghiệp công lập theo chế độ hợp đồng làm việc. Khác với công chức làm việc theo quyết định hành chính tại cơ quan nhà nước.'
+    explanation: 'Điều 1 Luật Viên chức 2025: Viên chức là công dân Việt Nam được tuyển dụng theo vị trí việc làm, làm việc tại đơn vị sự nghiệp công lập theo chế độ hợp đồng làm việc. Khác với công chức làm việc theo quyết định hành chính tại cơ quan nhà nước.'
   },
   {
     id: 'q-32', docId: 'luat-vien-chuc-2025', difficulty: 'medium',
     question: 'Theo Luật Viên chức 2025 (sửa đổi), mỗi viên chức được ký hợp đồng làm việc tại bao nhiêu đơn vị sự nghiệp công lập cùng lúc?',
     options: ['Tối đa 2 đơn vị nếu được cả hai cơ quan chủ quản đồng ý.', 'Chỉ được ký hợp đồng làm việc chính thức tại 1 đơn vị sự nghiệp công lập.', 'Không giới hạn số lượng đơn vị nếu thời gian công tác không chồng chéo.', 'Tối đa 3 đơn vị trong cùng một hệ thống ngành dọc (ví dụ: giáo dục).'],
     correctAnswer: 1,
-    explanation: 'Điều 13 Luật Viên chức 2025 quy định viên chức chỉ được ký hợp đồng làm việc tại 1 đơn vị sự nghiệp công lập. Đây là điểm mới quan trọng năm 2025/2026 nhằm chống kiêm nhiệm không minh bạch và đảm bảo chất lượng công việc.'
+    explanation: 'Điều 8 khoản 5 Luật Viên chức 2025 quy định viên chức chỉ được ký kết hợp đồng làm việc chính thức với 01 đơn vị sự nghiệp công lập. Đây là điểm quan trọng nhằm chống kiêm nhiệm không minh bạch và đảm bảo chất lượng công việc.'
   },
   {
     id: 'q-33', docId: 'luat-vien-chuc-2025', difficulty: 'easy',
@@ -260,9 +260,9 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 'q-37', docId: 'luat-vien-chuc-2025', difficulty: 'medium',
     question: 'Theo Điều 13 Luật Viên chức 2025, viên chức có được góp vốn vào cơ sở giáo dục ngoài công lập (trường tư) không?',
-    options: ['Không được phép vì tạo xung đột lợi ích với vai trò nhà giáo công lập.', 'Được phép góp vốn nhưng không được tham gia điều hành, quản lý.', 'Chỉ được góp vốn nếu nhận được sự chấp thuận của Bộ Giáo dục và Đào tạo.', 'Hoàn toàn không có quy định cụ thể, do đó tùy từng trường hợp.'],
+    options: ['Không được phép vì tạo xung đột lợi ích với vai trò nhà giáo công lập.', 'Được phép góp vốn và tham gia quản lý, điều hành (trừ trường hợp pháp luật phòng chống tham nhũng có quy định khác).', 'Chỉ được góp vốn nếu nhận được sự chấp thuận của Bộ Giáo dục và Đào tạo.', 'Hoàn toàn không có quy định cụ thể, do đó tùy từng trường hợp.'],
     correctAnswer: 1,
-    explanation: 'Điều 13 Luật Viên chức 2025 cho phép viên chức góp vốn vào cơ sở giáo dục ngoài công lập (trường tư) nhưng không được tham gia điều hành, quản lý hoạt động của cơ sở đó để tránh xung đột lợi ích với vị trí công lập.'
+    explanation: 'Điều 13 khoản 3 Luật Viên chức 2025 cho phép viên chức được góp vốn, tham gia quản lý, điều hành doanh nghiệp, hợp tác xã, bệnh viện, cơ sở giáo dục ngoài công lập, trừ trường hợp pháp luật về phòng chống tham nhũng hoặc pháp luật chuyên ngành có quy định khác.'
   },
   {
     id: 'q-38', docId: 'luat-vien-chuc-2025', difficulty: 'easy',
@@ -364,7 +364,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Vòng 1 thi tuyển viên chức theo Nghị định 259/2026 gồm bao nhiêu câu trắc nghiệm và thời gian làm bài là bao lâu?',
     options: ['40 câu / 40 phút.', '60 câu / 60 phút.', '80 câu / 90 phút.', '100 câu / 120 phút.'],
     correctAnswer: 1,
-    explanation: 'Điều 10 Nghị định 259/2026/NĐ-CP quy định Vòng 1 (thi trắc nghiệm kiến thức chung) gồm 60 câu hỏi trắc nghiệm, thời gian làm bài 60 phút. Phần Ngoại ngữ thi riêng 30 câu trong 30 phút.'
+    explanation: 'Điều 11 Nghị định 259/2026/NĐ-CP quy định Vòng 1 (thi trắc nghiệm kiến thức chung) gồm 60 câu hỏi trắc nghiệm, thời gian làm bài 60 phút. Phần Ngoại ngữ: số lượng câu hỏi do Hội đồng tuyển dụng quyết định, thời gian thi tối đa 60 phút.'
   },
   {
     id: 'q-52', docId: 'nghi-dinh-259-2026', difficulty: 'medium',
@@ -406,7 +406,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Bài thi Vòng 2 thi tuyển viên chức theo Nghị định 259/2026 kéo dài bao lâu?',
     options: ['60 phút (1 tiếng).', '120 phút (2 tiếng).', '180 phút (3 tiếng).', '240 phút (4 tiếng).'],
     correctAnswer: 2,
-    explanation: 'Điều 13 Nghị định 259/2026 quy định: Bài thi Vòng 2 (thi viết) có thời gian làm bài là 180 phút (3 tiếng). Đối với hình thức phỏng vấn, thời gian chuẩn bị tối đa 30 phút và phỏng vấn tối đa 30 phút.'
+    explanation: 'Điều 11 Nghị định 259/2026 quy định: Bài thi Vòng 2 (thi viết) có thời gian làm bài là 180 phút (3 tiếng). Đối với hình thức phỏng vấn, thời gian chuẩn bị không quá 15 phút và phỏng vấn tối đa 30 phút.'
   },
   {
     id: 'q-58', docId: 'nghi-dinh-259-2026', difficulty: 'medium',
@@ -418,16 +418,16 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 'q-59', docId: 'nghi-dinh-259-2026', difficulty: 'medium',
     question: 'Vòng 2 thi tuyển viên chức theo Nghị định 259/2026 gồm những hình thức thi nào?',
-    options: ['Chỉ có hình thức thi viết luận văn chuyên môn.', 'Thi viết hoặc phỏng vấn hoặc thực hành, tùy theo đặc thù vị trí việc làm.', 'Phải thi đủ cả 3 hình thức: viết, phỏng vấn và thực hành.', 'Thi trắc nghiệm chuyên sâu kết hợp thuyết trình giáo án.'],
+    options: ['Chỉ có hình thức thi viết luận văn chuyên môn.', 'Lựa chọn 1 trong 2 hình thức: Thực hành; hoặc kết hợp thi viết và phỏng vấn.', 'Phải thi đủ cả 3 hình thức: viết, phỏng vấn và thực hành.', 'Thi trắc nghiệm chuyên sâu kết hợp thuyết trình giáo án.'],
     correctAnswer: 1,
-    explanation: 'Điều 12 Nghị định 259/2026 quy định hình thức thi Vòng 2: Thi viết (180 phút) hoặc Phỏng vấn hoặc Thực hành, do cơ quan tuyển dụng lựa chọn phù hợp với đặc thù vị trí việc làm. Giáo viên thường thi viết chuyên môn + thực hành dạy học.'
+    explanation: 'Điều 11 Nghị định 259/2026 quy định hình thức thi Vòng 2 lựa chọn 1 trong 2 hình thức: (1) Thực hành; hoặc (2) Kết hợp thi viết và phỏng vấn. Không có hình thức thi viết đơn thuần hay phỏng vấn đơn thuần.'
   },
   {
     id: 'q-60', docId: 'nghi-dinh-259-2026', difficulty: 'hard',
     question: 'Phần thi Ngoại ngữ trong Vòng 1 tuyển dụng viên chức theo Nghị định 259/2026 gồm bao nhiêu câu và thời gian làm bài là bao lâu?',
-    options: ['20 câu / 20 phút.', '25 câu / 25 phút.', '30 câu / 30 phút.', '40 câu / 40 phút.'],
+    options: ['Cố định 20 câu / thời gian 20 phút.', 'Cố định 30 câu / thời gian 30 phút.', 'Số câu do Hội đồng tuyển dụng quyết định, thời gian tối đa 60 phút.', 'Cố định 60 câu / thời gian 60 phút (giống phần kiến thức chung).'],
     correctAnswer: 2,
-    explanation: 'Điều 10 Nghị định 259/2026: Phần thi Ngoại ngữ trong Vòng 1 gồm 30 câu trắc nghiệm trong thời gian 30 phút. Thí sinh phải trả lời đúng từ 50% (15 câu) trở lên để đạt yêu cầu phần thi này. Có thể miễn phần ngoại ngữ nếu có chứng chỉ đạt chuẩn.'
+    explanation: 'Điều 11 Nghị định 259/2026: Phần thi Ngoại ngữ trong Vòng 1 có số lượng câu hỏi do Hội đồng tuyển dụng quyết định, thời gian thi tối đa 60 phút. Thí sinh trả lời đúng từ 50% số câu trở lên là đạt. Có thể được miễn nếu có chứng chỉ ngoại ngữ đạt chuẩn.'
   },
 
   // ===== TT 03/2026 ỨNG XỬ — câu 61–70 =====
@@ -464,7 +464,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Thông tư 03/2026/TT-BGDĐT có hiệu lực thi hành từ ngày nào?',
     options: ['Từ ngày 01/01/2026.', 'Từ ngày 30/01/2026.', 'Từ ngày 01/3/2026.', 'Từ ngày 01/9/2026.'],
     correctAnswer: 1,
-    explanation: 'Thông tư 03/2026/TT-BGDĐT được Bộ Giáo dục và Đào tạo ban hành ngày 15/01/2026 và có hiệu lực từ ngày 30/01/2026. Đây là thời điểm bắt đầu áp dụng quy tắc ứng xử mới trong các cơ sở giáo dục phổ thông trên toàn quốc.'
+    explanation: 'Thông tư 03/2026/TT-BGDĐT được Bộ Giáo dục và Đào tạo ban hành ngày 30/01/2026 và có hiệu lực từ ngày ban hành 30/01/2026. Đây là thời điểm bắt đầu áp dụng quy tắc ứng xử mới trong các cơ sở giáo dục phổ thông trên toàn quốc.'
   },
   {
     id: 'q-66', docId: 'thong-tu-03-2026', difficulty: 'hard',
