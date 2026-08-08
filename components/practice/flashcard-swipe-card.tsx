@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
 import { Flashcard } from '@/types';
@@ -16,6 +16,13 @@ interface SwipeCardProps {
 
 export function SwipeCard({ card, docLabel, onRate }: SwipeCardProps) {
   const [flipped, setFlipped] = useState(false);
+  const [prevCardId, setPrevCardId] = useState(card.id);
+
+  if (prevCardId !== card.id) {
+    setPrevCardId(card.id);
+    setFlipped(false);
+  }
+
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotate = useTransform(x, [-300, 300], [-20, 20]);
@@ -23,11 +30,16 @@ export function SwipeCard({ card, docLabel, onRate }: SwipeCardProps) {
   const leftOpacity = useTransform(x, [-SWIPE_THRESHOLD, -30], [1, 0], { clamp: true });
   const upOpacity = useTransform(y, [0, SWIPE_UP_THRESHOLD], [0, 1], { clamp: true });
 
+  const flyOut = useCallback((toX: number, toY: number, cb: () => void) => {
+    animate(x, toX, { duration: 0.3 });
+    animate(y, toY, { duration: 0.3 });
+    setTimeout(cb, 280);
+  }, [x, y]);
+
   useEffect(() => {
-    setFlipped(false);
     animate(x, 0, { type: 'spring', stiffness: 300, damping: 30 });
     animate(y, 0, { type: 'spring', stiffness: 300, damping: 30 });
-  }, [card.id]);
+  }, [card.id, x, y]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -38,13 +50,7 @@ export function SwipeCard({ card, docLabel, onRate }: SwipeCardProps) {
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [onRate]);
-
-  const flyOut = (toX: number, toY: number, cb: () => void) => {
-    animate(x, toX, { duration: 0.3 });
-    animate(y, toY, { duration: 0.3 });
-    setTimeout(cb, 280);
-  };
+  }, [onRate, flyOut]);
 
   const handleDragEnd = (_: unknown, info: { offset: { x: number; y: number } }) => {
     const ox = info.offset.x;

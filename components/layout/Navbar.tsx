@@ -54,13 +54,13 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1 bg-orange-50 text-orange-600 px-2.5 py-1 rounded-full text-sm font-semibold">
             <Flame className="w-4 h-4" />
-            <span>{streak}</span>
+            <span suppressHydrationWarning>{streak}</span>
           </div>
           <div className="flex items-center gap-1 bg-indigo-50 text-indigo-700 px-2.5 py-1 rounded-full text-sm font-semibold">
             <Zap className="w-4 h-4" />
-            <span>{xp} XP</span>
+            <span suppressHydrationWarning>{xp} XP</span>
           </div>
-          <div className="hidden sm:block text-xs text-slate-500 font-medium">{level.title}</div>
+          <div className="hidden sm:block text-xs text-slate-500 font-medium" suppressHydrationWarning>{level.title}</div>
         </div>
       </div>
     </header>

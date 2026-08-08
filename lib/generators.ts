@@ -20,28 +20,116 @@ function flattenArticles(docs: LawDocument[]): ArticleWithDoc[] {
 
 export function generateFillBlanks(docs: LawDocument[]): FillBlankQuestion[] {
   const results: FillBlankQuestion[] = [];
+  const seen = new Set<string>();
+
   for (const article of flattenArticles(docs)) {
-    if (!article.examFocus || article.summary.length === 0) continue;
-    const keyTerm = article.examFocus.split(/[,;]/)[0].trim();
-    if (keyTerm.length < 2 || keyTerm.length > 40) continue;
+    if (!article.summary || article.summary.length === 0) continue;
 
-    const normKey = removeAccents(keyTerm);
-    const matchingSentence = article.summary.find((s) => removeAccents(s).includes(normKey));
-    if (!matchingSentence) continue;
+    // Strategy 1: Quoted terms in examFocus or summary (e.g. "lực lượng nòng cốt")
+    const quoteMatches = [
+      ...(article.examFocus?.match(/"([^"]+)"/g) || []),
+      ...article.summary.flatMap((s) => s.match(/"([^"]+)"/g) || []),
+    ];
 
-    const regex = new RegExp(keyTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
-    const sentence = matchingSentence.replace(regex, '___');
-    if (!sentence.includes('___')) continue;
+    let generated = false;
+    for (const q of quoteMatches) {
+      const term = q.replace(/"/g, '').trim();
+      if (term.length < 2 || term.length > 45) continue;
 
-    results.push({
-      id: `fb-${article.id}`,
-      docId: article.docId,
-      sentence,
-      blank: keyTerm,
-      hint: article.number,
-      articleRef: `${article.number} — ${article.title}`,
-    });
+      const normTerm = removeAccents(term);
+      const matchingSentence = article.summary.find((s) => removeAccents(s).includes(normTerm));
+      if (!matchingSentence) continue;
+
+      // Replace matching term with ___
+      const regex = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      const sentence = matchingSentence.replace(regex, '___');
+
+      if (sentence.includes('___')) {
+        const id = `fb-${article.id}-q`;
+        if (!seen.has(id)) {
+          seen.add(id);
+          results.push({
+            id,
+            docId: article.docId,
+            sentence,
+            blank: term,
+            hint: article.number,
+            articleRef: `${article.number} — ${article.title}`,
+          });
+          generated = true;
+          break;
+        }
+      }
+    }
+
+    if (generated) continue;
+
+    // Strategy 2: Predefined important key phrases/numbers to target in summary
+    const keyCandidates = [
+      'Bộ trưởng Bộ GD&ĐT', 'Bộ trưởng Bộ Giáo dục và Đào tạo', 'Chính phủ', 'Quốc hội',
+      'lực lượng nòng cốt', 'vai trò quyết định', 'bình đẳng giới', 'trách nhiệm giải trình',
+      'liêm chính học thuật', 'thực hành sư phạm', 'chứng chỉ hành nghề', 'nhà ở công vụ',
+      'cao nhất', '20/11', '01/01/2026', '01/07/2026', '36 tháng', '12 tháng', '8 tuần',
+      '5 năm', '15 năm', '10 năm', '50%', '100%', 'Vòng 1', 'Vòng 2', 'Hạng I', 'Hạng II',
+    ];
+
+    for (const term of keyCandidates) {
+      const normTerm = removeAccents(term);
+      const matchingSentence = article.summary.find((s) => removeAccents(s).includes(normTerm));
+      if (!matchingSentence) continue;
+
+      // Find actual case in sentence
+      const normSentence = removeAccents(matchingSentence);
+      const idx = normSentence.indexOf(normTerm);
+      if (idx === -1) continue;
+
+      const actualTerm = matchingSentence.slice(idx, idx + term.length);
+      const sentence = matchingSentence.slice(0, idx) + '___' + matchingSentence.slice(idx + term.length);
+
+      const id = `fb-${article.id}-${term}`;
+      if (!seen.has(id)) {
+        seen.add(id);
+        results.push({
+          id,
+          docId: article.docId,
+          sentence,
+          blank: actualTerm,
+          hint: article.number,
+          articleRef: `${article.number} — ${article.title}`,
+        });
+        generated = true;
+        break;
+      }
+    }
+
+    if (generated) continue;
+
+    // Strategy 3: Key-value pattern (Sentence with colon, e.g. "Tiêu chuẩn: Năng lực chuyên môn")
+    for (const s of article.summary) {
+      const colonIdx = s.indexOf(':');
+      if (colonIdx > 3 && colonIdx < s.length - 4) {
+        const valPart = s.slice(colonIdx + 1).trim();
+        const firstPhrase = valPart.split(/[,;.–-]/)[0].trim();
+        if (firstPhrase.length >= 3 && firstPhrase.length <= 35) {
+          const sentence = s.replace(firstPhrase, '___');
+          const id = `fb-${article.id}-kv`;
+          if (!seen.has(id)) {
+            seen.add(id);
+            results.push({
+              id,
+              docId: article.docId,
+              sentence,
+              blank: firstPhrase,
+              hint: article.number,
+              articleRef: `${article.number} — ${article.title}`,
+            });
+            break;
+          }
+        }
+      }
+    }
   }
+
   return results;
 }
 

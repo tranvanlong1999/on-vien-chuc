@@ -60,6 +60,8 @@ export interface QuizQuestion {
   correctAnswer: number;
   explanation: string;
   difficulty?: 'easy' | 'medium' | 'hard';
+  articleRef?: string;
+  isNew2026?: boolean;
 }
 
 export interface EssayPrompt {

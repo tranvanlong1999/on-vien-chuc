@@ -41,6 +41,7 @@ export function DashboardClient({ documents }: Props) {
           value={`${readArticles}/${totalArticles}`}
           pct={readPct}
           color="bg-blue-100"
+          href="/hoc"
         />
         <StatCard
           icon={<Layers className="w-5 h-5 text-purple-600" />}
@@ -48,6 +49,7 @@ export function DashboardClient({ documents }: Props) {
           value={`${masteredCards.length}/${flashcards.length}`}
           pct={masteredPct}
           color="bg-purple-100"
+          href="/luyen-tap/flashcards"
         />
         <StatCard
           icon={<Flame className="w-5 h-5 text-orange-500" />}
@@ -55,6 +57,7 @@ export function DashboardClient({ documents }: Props) {
           value={`${streak} ngày`}
           pct={Math.min(100, streak * 14)}
           color="bg-orange-100"
+          href="/tien-do"
         />
         <StatCard
           icon={<Trophy className="w-5 h-5 text-yellow-600" />}
@@ -62,6 +65,7 @@ export function DashboardClient({ documents }: Props) {
           value={mockHighScore > 0 ? `${mockHighScore}/10` : 'Chưa thi'}
           pct={mockHighScore * 10}
           color="bg-yellow-100"
+          href="/de-thi"
         />
       </div>
 
@@ -202,15 +206,23 @@ export function DashboardClient({ documents }: Props) {
   );
 }
 
-function StatCard({ icon, label, value, pct, color }: { icon: React.ReactNode; label: string; value: string; pct: number; color: string }) {
-  return (
-    <div className="card p-4">
-      <div className={`w-9 h-9 rounded-xl ${color} flex items-center justify-center mb-3`}>{icon}</div>
-      <p className="text-xs text-slate-500 mb-0.5">{label}</p>
+function StatCard({ icon, label, value, pct, color, href }: { icon: React.ReactNode; label: string; value: string; pct: number; color: string; href?: string }) {
+  const content = (
+    <div className="card p-4 hover:border-indigo-300 hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group">
+      <div className={`w-9 h-9 rounded-xl ${color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>{icon}</div>
+      <p className="text-xs text-slate-500 mb-0.5 group-hover:text-indigo-600 transition-colors flex items-center justify-between">
+        <span>{label}</span>
+        <span className="text-[10px] opacity-0 group-hover:opacity-100 text-indigo-500 font-bold transition-opacity">Chi tiết →</span>
+      </p>
       <p className="font-bold text-slate-800 text-base">{value}</p>
       <div className="progress-bar mt-2">
         <div className="progress-fill" style={{ width: `${pct}%` }} />
       </div>
     </div>
   );
+
+  if (href) {
+    return <Link href={href}>{content}</Link>;
+  }
+  return content;
 }
