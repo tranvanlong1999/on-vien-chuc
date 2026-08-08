@@ -91,3 +91,19 @@ export interface UserProgress {
   // Planner
   plannerChecked: boolean[];
 }
+
+
+export interface EvaluateScoreItem {
+  criterion: string;
+  score: number;
+  maxPoints: number;
+  comment: string;
+}
+
+export interface EvaluateResponse {
+  scores: EvaluateScoreItem[];
+  totalScore: number;
+  strength: string[];
+  weakness: string[];
+  improvedEssay: string;
+}

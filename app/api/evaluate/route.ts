@@ -1,19 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import type { EvaluateResponse } from '@/types';
 
-export interface EvaluateRequest {
-  scenario: string;       // đề bài tình huống
-  essay: string;          // bài làm của học viên
+interface EvaluateRequest {
+  scenario: string;
+  essay: string;
   rubric: { criterion: string; points: number }[];
-  legalBasis: string[];   // căn cứ pháp lý cần vận dụng
-}
-
-export interface EvaluateResponse {
-  scores: { criterion: string; score: number; maxPoints: number; comment: string }[];
-  totalScore: number;
-  strength: string[];
-  weakness: string[];
-  improvedEssay: string;
+  legalBasis: string[];
 }
 
 const SYSTEM_PROMPT = `Bạn là giám khảo chấm thi viên chức giáo viên tiểu học Việt Nam năm 2026, chuyên gia về Thông tư 03/2026/TT-BGDĐT (Quy tắc ứng xử nhà giáo) và Luật Nhà giáo 73/2025/QH15.

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { PedagogyScenario } from '@/data/scenarios';
 import { cn } from '@/lib/utils';
 import { ChevronDown, ChevronUp, ArrowLeft, AlertTriangle, Sparkles, Loader2 } from 'lucide-react';
-import type { EvaluateResponse } from '@/app/api/evaluate/route';
+import type { EvaluateResponse } from '@/types';
 import {
   CATEGORY_LABELS,
   CATEGORY_COLORS,
